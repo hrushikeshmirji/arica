@@ -1,0 +1,15 @@
+{
+  "name": "arecavision-combined",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ArecaVision AI root proxy scripts",
+  "scripts": {
+    "dev": "npm --prefix FRONTEND run dev",
+    "build": "npm --prefix FRONTEND run build",
+    "preview": "npm --prefix FRONTEND run preview",
+    "test": "npm --prefix FRONTEND run test",
+    "frontend": "npm --prefix FRONTEND run dev",
+    "frontend:install": "npm --prefix FRONTEND install",
+    "backend": "cd backend && venv\\Scripts\\python -m uvicorn server.app:app --reload --host 0.0.0.0 --port 8000"
+  }
+}

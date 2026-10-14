@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-10-13T06:28:18.806099+00:00",
+  "checkpoints": {
+    "backend/cnn/checkpoints/cnn_efficientnet_b0.pth": {
+      "size_bytes": 18972509,
+      "mtime": 1790091293.3168635,
+      "mtime_iso": "2026-09-22T15:34:53.316864+00:00",
+      "sha256": "62A43C03CD72AD73B26FE1E40A278FC33211EC4388A29B45FF5F0ADBD339AAFF"
+    },
+    "backend/cnn/checkpoints/cnn_efficientnet_b0_backup.pth": {
+      "size_bytes": 18972445,
+      "mtime": 1789923174.5579522,
+      "mtime_iso": "2026-09-20T16:52:54.557952+00:00",
+      "sha256": "40FE22BCA86EBF83C4E12E310F8B5722D199FE1C44DC4D1C4DDFDA6B7F1D4C92"
+    },
+    "backend/vit/checkpoints/vit_b16.pth": {
+      "size_bytes": 343294539,
+      "mtime": 1791641374.4403372,
+      "mtime_iso": "2026-10-10T14:09:34.440337+00:00",
+      "sha256": "98D11021FE5D61E2661CCDEFFE6E4B8EAF0DB4BEB17672B5B7F55F945C85B112"
+    },
+    "backend/vit/checkpoints/vit_b16_backup.pth": {
+      "size_bytes": 343294219,
+      "mtime": 1791570722.0754557,
+      "mtime_iso": "2026-10-09T18:32:02.075456+00:00",
+      "sha256": "961848CF052E601F6B430D87A8F8C62F1530E58D8120E6EFD7C18FCA477996FE"
+    },
+    "backend/vit/checkpoints/vit_class_prototypes.pt": {
+      "size_bytes": 72361,
+      "mtime": 1791642441.908092,
+      "mtime_iso": "2026-10-10T14:27:21.908092+00:00",
+      "sha256": "42DD437137CDBACC2FCA7CF8D8A901C6EB319E425AB137A6F76D76AE98F3B208"
+    },
+    "backend/yolo/checkpoints/best.pt": {
+      "size_bytes": 24464679,
+      "mtime": 1790065489.600877,
+      "mtime_iso": "2026-09-22T08:24:49.600877+00:00",
+      "sha256": "13D87EAF7A5C6FBDE6A31B40D0520F477A2A12C87E5C4540412D18A49374FD8B"
+    },
+    "backend/yolo/checkpoints/best_ep1_backup.pt": {
+      "size_bytes": 24464679,
+      "mtime": 1789930925.8781211,
+      "mtime_iso": "2026-09-20T19:02:05.878121+00:00",
+      "sha256": "13D87EAF7A5C6FBDE6A31B40D0520F477A2A12C87E5C4540412D18A49374FD8B"
+    },
+    "backend/yolo/checkpoints/epoch3_last.pt": {
+      "size_bytes": 24464999,
+      "mtime": 1789930914.2202337,
+      "mtime_iso": "2026-09-20T19:01:54.220234+00:00",
+      "sha256": "D8456D536A2A9024ACB1A0B8F9664C2E7D92944D25001AB82994A87F758C2AB2"
+    },
+    "backend/yolo/checkpoints/last.pt": {
+      "size_bytes": 24464999,
+      "mtime": 1790065489.753861,
+      "mtime_iso": "2026-09-22T08:24:49.753861+00:00",
+      "sha256": "D8456D536A2A9024ACB1A0B8F9664C2E7D92944D25001AB82994A87F758C2AB2"
+    },
+    "runs/detect/train-3/weights/best.pt": {
+      "size_bytes": 6226154,
+      "mtime": 1790096043.020528,
+      "mtime_iso": "2026-09-22T16:54:03.020528+00:00",
+      "sha256": "7D4641122075D7BFEF68B000C5773B9E1AFF5147E5C44007DCAFDE972A143E98"
+    },
+    "runs/detect/train-3/weights/last.pt": {
+      "size_bytes": 6226154,
+      "mtime": 1790096042.9670317,
+      "mtime_iso": "2026-09-22T16:54:02.967032+00:00",
+      "sha256": "E0FA90D4EC500B4820BCE344A1EA01E43667238A73F79F47C170038B0F3E0834"
+    }
+  },
+  "baseline_comparisons": {
+    "CNN": {
+      "file": "backend/cnn/checkpoints/cnn_efficientnet_b0.pth",
+      "actual_sha256": "62A43C03CD72AD73B26FE1E40A278FC33211EC4388A29B45FF5F0ADBD339AAFF",
+      "expected_sha256": "62A43C03CD72AD73B26FE1E40A278FC33211EC4388A29B45FF5F0ADBD339AAFF",
+      "match": true
+    },
+    "ViT": {
+      "file": "backend/vit/checkpoints/vit_b16.pth",
+      "actual_sha256": "98D11021FE5D61E2661CCDEFFE6E4B8EAF0DB4BEB17672B5B7F55F945C85B112",
+      "expected_sha256": "98D11021FE5D61E2661CCDEFFE6E4B8EAF0DB4BEB17672B5B7F55F945C85B112",
+      "match": true
+    },
+    "YOLO best.pt": {
+      "file": "backend/yolo/checkpoints/best.pt",
+      "actual_sha256": "13D87EAF7A5C6FBDE6A31B40D0520F477A2A12C87E5C4540412D18A49374FD8B",
+      "expected_sha256": "13D87EAF7A5C6FBDE6A31B40D0520F477A2A12C87E5C4540412D18A49374FD8B",
+      "match": true
+    }
+  }
+}

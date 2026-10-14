@@ -1,0 +1,5871 @@
+{
+  "metadata": {
+    "schema_version": "2.0.0",
+    "generator": "backend/build_vit_dataset.py",
+    "created_at": "2026-10-13T06:42:05.734921Z",
+    "real_classes": [
+      "Anthracnose",
+      "FruitRot",
+      "Healthy",
+      "NutCracking",
+      "SootyMold"
+    ],
+    "seed_classes": [
+      "BudBorer",
+      "LeafSpotComplex",
+      "PhytoplasmaYellowLeaf",
+      "StemBleeding",
+      "StemCracking",
+      "YellowLeaf"
+    ],
+    "governance": {
+      "conflicts_excluded": true,
+      "exact_dedup_applied": true,
+      "clustering_hamming_max": 6,
+      "held_out_test_fold_isolated": true,
+      "seed_images_in_val_or_test": 0
+    }
+  },
+  "summary": {
+    "total_scanned_raw": 652,
+    "excluded_conflicts_count": 131,
+    "excluded_intra_exact_duplicates_count": 6,
+    "retained_real_images_total": 216,
+    "retained_real_clusters_total": 215,
+    "selected_capped_seeds_total": 60,
+    "omitted_seed_images_total": 240,
+    "variant_a": {
+      "description": "Real images with 5-fold CV + 1 held-out test fold + 60 capped seeds (train only)",
+      "split_totals": {
+        "train": 204,
+        "val": 36,
+        "test": 36
+      },
+      "by_disease": {
+        "Anthracnose": {
+          "train": 27,
+          "val": 7,
+          "test": 7
+        },
+        "BudBorer": {
+          "train": 10
+        },
+        "FruitRot": {
+          "val": 7,
+          "train": 30,
+          "test": 7
+        },
+        "Healthy": {
+          "train": 37,
+          "val": 10,
+          "test": 9
+        },
+        "LeafSpotComplex": {
+          "train": 10
+        },
+        "NutCracking": {
+          "val": 5,
+          "train": 19,
+          "test": 5
+        },
+        "PhytoplasmaYellowLeaf": {
+          "train": 10
+        },
+        "SootyMold": {
+          "test": 8,
+          "train": 31,
+          "val": 7
+        },
+        "StemBleeding": {
+          "train": 10
+        },
+        "StemCracking": {
+          "train": 10
+        },
+        "YellowLeaf": {
+          "train": 10
+        }
+      }
+    },
+    "variant_b": {
+      "description": "Real images only (no seeds anywhere); same CV folds and held-out test fold",
+      "split_totals": {
+        "train": 144,
+        "val": 36,
+        "test": 36,
+        "excluded": 60
+      },
+      "by_disease": {
+        "Anthracnose": {
+          "train": 27,
+          "val": 7,
+          "test": 7
+        },
+        "BudBorer": {
+          "excluded": 10
+        },
+        "FruitRot": {
+          "val": 7,
+          "train": 30,
+          "test": 7
+        },
+        "Healthy": {
+          "train": 37,
+          "val": 10,
+          "test": 9
+        },
+        "LeafSpotComplex": {
+          "excluded": 10
+        },
+        "NutCracking": {
+          "val": 5,
+          "train": 19,
+          "test": 5
+        },
+        "PhytoplasmaYellowLeaf": {
+          "excluded": 10
+        },
+        "SootyMold": {
+          "test": 8,
+          "train": 31,
+          "val": 7
+        },
+        "StemBleeding": {
+          "excluded": 10
+        },
+        "StemCracking": {
+          "excluded": 10
+        },
+        "YellowLeaf": {
+          "excluded": 10
+        }
+      }
+    },
+    "real_folds_breakdown": {
+      "description": "5 stratified CV folds (folds 0..4, 36 each) + 1 fixed held-out test fold (36)",
+      "by_disease": {
+        "Anthracnose": {
+          "fold_2": 7,
+          "fold_0": 7,
+          "fold_4": 7,
+          "fold_3": 6,
+          "test_fold": 7,
+          "fold_1": 7
+        },
+        "FruitRot": {
+          "fold_0": 7,
+          "fold_3": 8,
+          "test_fold": 7,
+          "fold_1": 8,
+          "fold_2": 7,
+          "fold_4": 7
+        },
+        "Healthy": {
+          "fold_2": 10,
+          "fold_0": 10,
+          "test_fold": 9,
+          "fold_1": 9,
+          "fold_3": 9,
+          "fold_4": 9
+        },
+        "NutCracking": {
+          "fold_0": 5,
+          "fold_3": 5,
+          "fold_1": 5,
+          "fold_2": 4,
+          "test_fold": 5,
+          "fold_4": 5
+        },
+        "SootyMold": {
+          "test_fold": 8,
+          "fold_4": 8,
+          "fold_3": 8,
+          "fold_1": 7,
+          "fold_2": 8,
+          "fold_0": 7
+        }
+      },
+      "fold_totals": {
+        "fold_0": 36,
+        "fold_1": 36,
+        "fold_2": 36,
+        "fold_3": 36,
+        "fold_4": 36,
+        "test_fold": 36
+      }
+    }
+  },
+  "exclusions": [
+    {
+      "file": "existing_anthracnose_1.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_001"
+    },
+    {
+      "file": "existing_anthracnose_11.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_002"
+    },
+    {
+      "file": "existing_anthracnose_12.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_003"
+    },
+    {
+      "file": "existing_anthracnose_13.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_004"
+    },
+    {
+      "file": "existing_anthracnose_14.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_005"
+    },
+    {
+      "file": "existing_anthracnose_16.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_006"
+    },
+    {
+      "file": "existing_anthracnose_19.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_007"
+    },
+    {
+      "file": "existing_anthracnose_21.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_008"
+    },
+    {
+      "file": "existing_anthracnose_23.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_009"
+    },
+    {
+      "file": "existing_anthracnose_24.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_010"
+    },
+    {
+      "file": "existing_anthracnose_25.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_011"
+    },
+    {
+      "file": "existing_anthracnose_26.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_012"
+    },
+    {
+      "file": "existing_anthracnose_27.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_013"
+    },
+    {
+      "file": "existing_anthracnose_29.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_014"
+    },
+    {
+      "file": "existing_anthracnose_30.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_016"
+    },
+    {
+      "file": "existing_anthracnose_32.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_017"
+    },
+    {
+      "file": "existing_anthracnose_35.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_018"
+    },
+    {
+      "file": "existing_anthracnose_39.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_019"
+    },
+    {
+      "file": "existing_anthracnose_46.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_020"
+    },
+    {
+      "file": "existing_anthracnose_47.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_021"
+    },
+    {
+      "file": "existing_anthracnose_48.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_022"
+    },
+    {
+      "file": "existing_anthracnose_5.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_023"
+    },
+    {
+      "file": "existing_anthracnose_52.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_024"
+    },
+    {
+      "file": "existing_anthracnose_55.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_025"
+    },
+    {
+      "file": "existing_anthracnose_59.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_026"
+    },
+    {
+      "file": "existing_anthracnose_60.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_027"
+    },
+    {
+      "file": "existing_anthracnose_65.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_028"
+    },
+    {
+      "file": "existing_anthracnose_70.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_029"
+    },
+    {
+      "file": "existing_anthracnose_9.jpg",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "disease": "Anthracnose",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_030"
+    },
+    {
+      "file": "existing_fruit_rot_1.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_031"
+    },
+    {
+      "file": "existing_fruit_rot_10.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_032"
+    },
+    {
+      "file": "existing_fruit_rot_13.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_033"
+    },
+    {
+      "file": "existing_fruit_rot_18.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_034"
+    },
+    {
+      "file": "existing_fruit_rot_19.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_035"
+    },
+    {
+      "file": "existing_fruit_rot_2.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_001"
+    },
+    {
+      "file": "existing_fruit_rot_21.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_036"
+    },
+    {
+      "file": "existing_fruit_rot_23.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_023"
+    },
+    {
+      "file": "existing_fruit_rot_24.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_037"
+    },
+    {
+      "file": "existing_fruit_rot_25.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_038"
+    },
+    {
+      "file": "existing_fruit_rot_3.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_039"
+    },
+    {
+      "file": "existing_fruit_rot_36.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_040"
+    },
+    {
+      "file": "existing_fruit_rot_4.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_041"
+    },
+    {
+      "file": "existing_fruit_rot_44.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_042"
+    },
+    {
+      "file": "existing_fruit_rot_45.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_043"
+    },
+    {
+      "file": "existing_fruit_rot_46.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_044"
+    },
+    {
+      "file": "existing_fruit_rot_49.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_045"
+    },
+    {
+      "file": "existing_fruit_rot_5.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_046"
+    },
+    {
+      "file": "existing_fruit_rot_51.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_047"
+    },
+    {
+      "file": "existing_fruit_rot_52.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_048"
+    },
+    {
+      "file": "existing_fruit_rot_55.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_049"
+    },
+    {
+      "file": "existing_fruit_rot_57.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_050"
+    },
+    {
+      "file": "existing_fruit_rot_58.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_051"
+    },
+    {
+      "file": "existing_fruit_rot_60.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_025"
+    },
+    {
+      "file": "existing_fruit_rot_62.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_052"
+    },
+    {
+      "file": "existing_fruit_rot_63.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_053"
+    },
+    {
+      "file": "existing_fruit_rot_74.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_054"
+    },
+    {
+      "file": "existing_fruit_rot_75.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_055"
+    },
+    {
+      "file": "existing_fruit_rot_8.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_056"
+    },
+    {
+      "file": "existing_fruit_rot_83.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_057"
+    },
+    {
+      "file": "existing_fruit_rot_87.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_058"
+    },
+    {
+      "file": "existing_fruit_rot_89.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_006"
+    },
+    {
+      "file": "existing_fruit_rot_93.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_059"
+    },
+    {
+      "file": "existing_fruit_rot_95.jpg",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "disease": "FruitRot",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_060"
+    },
+    {
+      "file": "existing_healthy_16.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_010"
+    },
+    {
+      "file": "existing_healthy_18.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_008"
+    },
+    {
+      "file": "existing_healthy_2.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_003"
+    },
+    {
+      "file": "existing_healthy_22.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_026"
+    },
+    {
+      "file": "existing_healthy_28.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_017"
+    },
+    {
+      "file": "existing_healthy_33.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_016"
+    },
+    {
+      "file": "existing_healthy_34.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_012"
+    },
+    {
+      "file": "existing_healthy_39.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_027"
+    },
+    {
+      "file": "existing_healthy_4.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_024"
+    },
+    {
+      "file": "existing_healthy_40.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_019"
+    },
+    {
+      "file": "existing_healthy_41.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_029"
+    },
+    {
+      "file": "existing_healthy_50.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_054"
+    },
+    {
+      "file": "existing_healthy_6.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_007"
+    },
+    {
+      "file": "existing_healthy_61.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_014"
+    },
+    {
+      "file": "existing_healthy_69.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_009"
+    },
+    {
+      "file": "existing_healthy_73.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_021"
+    },
+    {
+      "file": "existing_healthy_9.jpg",
+      "folder": "areca_healthy",
+      "disease": "Healthy",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_030"
+    },
+    {
+      "file": "existing_nut_cracking_1.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_041"
+    },
+    {
+      "file": "existing_nut_cracking_10.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_033"
+    },
+    {
+      "file": "existing_nut_cracking_11.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_046"
+    },
+    {
+      "file": "existing_nut_cracking_12.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_034"
+    },
+    {
+      "file": "existing_nut_cracking_13.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_037"
+    },
+    {
+      "file": "existing_nut_cracking_16.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_042"
+    },
+    {
+      "file": "existing_nut_cracking_17.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_048"
+    },
+    {
+      "file": "existing_nut_cracking_18.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_044"
+    },
+    {
+      "file": "existing_nut_cracking_19.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_025"
+    },
+    {
+      "file": "existing_nut_cracking_2.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_032"
+    },
+    {
+      "file": "existing_nut_cracking_23.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_038"
+    },
+    {
+      "file": "existing_nut_cracking_24.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_047"
+    },
+    {
+      "file": "existing_nut_cracking_25.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_043"
+    },
+    {
+      "file": "existing_nut_cracking_27.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_031"
+    },
+    {
+      "file": "existing_nut_cracking_29.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_053"
+    },
+    {
+      "file": "existing_nut_cracking_3.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_023"
+    },
+    {
+      "file": "existing_nut_cracking_30.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_059"
+    },
+    {
+      "file": "existing_nut_cracking_33.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_051"
+    },
+    {
+      "file": "existing_nut_cracking_36.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_052"
+    },
+    {
+      "file": "existing_nut_cracking_38.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_060"
+    },
+    {
+      "file": "existing_nut_cracking_39.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_030"
+    },
+    {
+      "file": "existing_nut_cracking_4.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_001"
+    },
+    {
+      "file": "existing_nut_cracking_5.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_049"
+    },
+    {
+      "file": "existing_nut_cracking_50.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_006"
+    },
+    {
+      "file": "existing_nut_cracking_54.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_018"
+    },
+    {
+      "file": "existing_nut_cracking_55.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_040"
+    },
+    {
+      "file": "existing_nut_cracking_57.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_035"
+    },
+    {
+      "file": "existing_nut_cracking_59.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_045"
+    },
+    {
+      "file": "existing_nut_cracking_6.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_050"
+    },
+    {
+      "file": "existing_nut_cracking_61.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_055"
+    },
+    {
+      "file": "existing_nut_cracking_62.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_058"
+    },
+    {
+      "file": "existing_nut_cracking_66.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_015"
+    },
+    {
+      "file": "existing_nut_cracking_68.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_057"
+    },
+    {
+      "file": "existing_nut_cracking_69.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_036"
+    },
+    {
+      "file": "existing_nut_cracking_7.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_056"
+    },
+    {
+      "file": "existing_nut_cracking_70.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_014"
+    },
+    {
+      "file": "existing_nut_cracking_9.jpg",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "disease": "NutCracking",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_039"
+    },
+    {
+      "file": "existing_sooty_mold_12.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_002"
+    },
+    {
+      "file": "existing_sooty_mold_15.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_004"
+    },
+    {
+      "file": "existing_sooty_mold_17.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_011"
+    },
+    {
+      "file": "existing_sooty_mold_20.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_005"
+    },
+    {
+      "file": "existing_sooty_mold_24.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_018"
+    },
+    {
+      "file": "existing_sooty_mold_25.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_010"
+    },
+    {
+      "file": "existing_sooty_mold_29.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_009"
+    },
+    {
+      "file": "existing_sooty_mold_42.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_020"
+    },
+    {
+      "file": "existing_sooty_mold_47.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_014"
+    },
+    {
+      "file": "existing_sooty_mold_52.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_006"
+    },
+    {
+      "file": "existing_sooty_mold_62.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_013"
+    },
+    {
+      "file": "existing_sooty_mold_68.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_028"
+    },
+    {
+      "file": "existing_sooty_mold_71.jpg",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "disease": "SootyMold",
+      "reason": "cross_class_conflict",
+      "detail": "Unresolved conflict group group_022"
+    },
+    {
+      "file": "seed_36.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "intra_class_exact_duplicate",
+      "detail": "Exact dHash match with seed_30.jpg"
+    },
+    {
+      "file": "seed_36.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "intra_class_exact_duplicate",
+      "detail": "Exact dHash match with seed_30.jpg"
+    },
+    {
+      "file": "seed_36.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "intra_class_exact_duplicate",
+      "detail": "Exact dHash match with seed_30.jpg"
+    },
+    {
+      "file": "seed_36.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "intra_class_exact_duplicate",
+      "detail": "Exact dHash match with seed_30.jpg"
+    },
+    {
+      "file": "seed_36.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "intra_class_exact_duplicate",
+      "detail": "Exact dHash match with seed_30.jpg"
+    },
+    {
+      "file": "seed_36.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "intra_class_exact_duplicate",
+      "detail": "Exact dHash match with seed_30.jpg"
+    },
+    {
+      "file": "seed_22.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_08.jpg"
+    },
+    {
+      "file": "seed_10.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_18.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_21.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_24.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_40.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_48.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_49.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_11.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_30.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_11.jpg"
+    },
+    {
+      "file": "seed_12.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_13.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_14.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_15.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_16.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_43.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_16.jpg"
+    },
+    {
+      "file": "seed_17.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_19.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_20.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_23.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_25.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_28.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_25.jpg"
+    },
+    {
+      "file": "seed_26.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_27.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_29.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_31.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_32.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_33.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_32.jpg"
+    },
+    {
+      "file": "seed_34.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_35.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_37.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_47.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_37.jpg"
+    },
+    {
+      "file": "seed_38.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_39.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_41.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_42.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_44.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_45.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_46.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_50.jpg",
+      "folder": "areca_pest_bud_borer",
+      "disease": "BudBorer",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class BudBorer capped at 10 images"
+    },
+    {
+      "file": "seed_22.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_08.jpg"
+    },
+    {
+      "file": "seed_10.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_18.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_21.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_24.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_40.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_48.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_49.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_11.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_30.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_11.jpg"
+    },
+    {
+      "file": "seed_12.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_13.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_14.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_15.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_16.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_43.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_16.jpg"
+    },
+    {
+      "file": "seed_17.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_19.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_20.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_23.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_25.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_28.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_25.jpg"
+    },
+    {
+      "file": "seed_26.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_27.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_29.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_31.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_32.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_33.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_32.jpg"
+    },
+    {
+      "file": "seed_34.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_35.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_37.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_47.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_37.jpg"
+    },
+    {
+      "file": "seed_38.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_39.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_41.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_42.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_44.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_45.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_46.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_50.jpg",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "disease": "LeafSpotComplex",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class LeafSpotComplex capped at 10 images"
+    },
+    {
+      "file": "seed_22.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_08.jpg"
+    },
+    {
+      "file": "seed_10.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_18.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_21.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_24.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_40.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_48.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_49.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_11.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_30.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_11.jpg"
+    },
+    {
+      "file": "seed_12.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_13.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_14.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_15.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_16.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_43.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_16.jpg"
+    },
+    {
+      "file": "seed_17.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_19.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_20.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_23.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_25.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_28.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_25.jpg"
+    },
+    {
+      "file": "seed_26.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_27.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_29.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_31.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_32.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_33.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_32.jpg"
+    },
+    {
+      "file": "seed_34.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_35.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_37.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_47.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_37.jpg"
+    },
+    {
+      "file": "seed_38.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_39.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_41.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_42.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_44.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_45.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_46.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_50.jpg",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "disease": "PhytoplasmaYellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class PhytoplasmaYellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_22.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_08.jpg"
+    },
+    {
+      "file": "seed_10.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_18.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_21.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_24.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_40.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_48.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_49.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_11.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_30.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_11.jpg"
+    },
+    {
+      "file": "seed_12.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_13.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_14.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_15.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_16.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_43.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_16.jpg"
+    },
+    {
+      "file": "seed_17.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_19.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_20.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_23.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_25.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_28.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_25.jpg"
+    },
+    {
+      "file": "seed_26.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_27.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_29.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_31.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_32.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_33.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_32.jpg"
+    },
+    {
+      "file": "seed_34.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_35.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_37.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_47.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_37.jpg"
+    },
+    {
+      "file": "seed_38.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_39.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_41.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_42.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_44.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_45.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_46.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_50.jpg",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "disease": "StemBleeding",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemBleeding capped at 10 images"
+    },
+    {
+      "file": "seed_22.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_08.jpg"
+    },
+    {
+      "file": "seed_10.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_18.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_21.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_24.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_40.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_48.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_49.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_11.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_30.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_11.jpg"
+    },
+    {
+      "file": "seed_12.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_13.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_14.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_15.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_16.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_43.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_16.jpg"
+    },
+    {
+      "file": "seed_17.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_19.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_20.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_23.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_25.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_28.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_25.jpg"
+    },
+    {
+      "file": "seed_26.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_27.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_29.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_31.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_32.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_33.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_32.jpg"
+    },
+    {
+      "file": "seed_34.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_35.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_37.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_47.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_37.jpg"
+    },
+    {
+      "file": "seed_38.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_39.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_41.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_42.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_44.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_45.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_46.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_50.jpg",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "disease": "StemCracking",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class StemCracking capped at 10 images"
+    },
+    {
+      "file": "seed_22.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_08.jpg"
+    },
+    {
+      "file": "seed_10.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_18.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_21.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_24.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_40.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_48.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_49.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_10.jpg"
+    },
+    {
+      "file": "seed_11.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_30.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_11.jpg"
+    },
+    {
+      "file": "seed_12.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_13.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_14.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_15.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_16.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_43.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_16.jpg"
+    },
+    {
+      "file": "seed_17.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_19.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_20.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_23.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_25.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_28.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_25.jpg"
+    },
+    {
+      "file": "seed_26.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_27.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_29.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_31.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_32.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_33.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_32.jpg"
+    },
+    {
+      "file": "seed_34.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_35.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_37.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_47.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cluster_co_member",
+      "detail": "Max 1 per cluster; cluster represented by seed_37.jpg"
+    },
+    {
+      "file": "seed_38.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_39.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_41.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_42.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_44.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_45.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_46.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    },
+    {
+      "file": "seed_50.jpg",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "disease": "YellowLeaf",
+      "reason": "seed_cap_exceeded",
+      "detail": "Class YellowLeaf capped at 10 images"
+    }
+  ],
+  "entries": [
+    {
+      "filename": "existing_anthracnose_10.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0000",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "a686a233931e0e06"
+    },
+    {
+      "filename": "existing_anthracnose_15.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0001",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "c872b1c9d93c34a4"
+    },
+    {
+      "filename": "existing_anthracnose_17.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0002",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "89b331272baba236"
+    },
+    {
+      "filename": "existing_anthracnose_18.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0003",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "637372a2aa626a6b"
+    },
+    {
+      "filename": "existing_anthracnose_2.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0004",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "8c8c517363273979"
+    },
+    {
+      "filename": "existing_anthracnose_20.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0005",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "48111c2f3b130640"
+    },
+    {
+      "filename": "existing_anthracnose_22.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0006",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6c8b999bdb66e0ca"
+    },
+    {
+      "filename": "existing_anthracnose_28.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0007",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "9b676518a92d6dbd"
+    },
+    {
+      "filename": "existing_anthracnose_31.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0008",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "84a503079906e707"
+    },
+    {
+      "filename": "existing_anthracnose_33.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0009",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "d6a6dcccaca4e4ee"
+    },
+    {
+      "filename": "existing_anthracnose_34.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0010",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "808284095a499989"
+    },
+    {
+      "filename": "existing_anthracnose_36.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0011",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "1a04025c4e26a626"
+    },
+    {
+      "filename": "existing_anthracnose_37.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0012",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "8e327a9675659a12"
+    },
+    {
+      "filename": "existing_anthracnose_38.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0013",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "0f2d6e6e2f2f272f"
+    },
+    {
+      "filename": "existing_anthracnose_4.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0014",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "9cdc65772f777b3b"
+    },
+    {
+      "filename": "existing_anthracnose_41.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0015",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "7a421254044d2929"
+    },
+    {
+      "filename": "existing_anthracnose_42.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0016",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "86c391052d1f6232"
+    },
+    {
+      "filename": "existing_anthracnose_43.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0017",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "6d6bf7352d393d2d"
+    },
+    {
+      "filename": "existing_anthracnose_44.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0018",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "29894040286ee828"
+    },
+    {
+      "filename": "existing_anthracnose_45.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0019",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "96aeac1d57cc1a96"
+    },
+    {
+      "filename": "existing_anthracnose_49.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0020",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "939319191d3d3939"
+    },
+    {
+      "filename": "existing_anthracnose_51.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0021",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b82b4ad0a52ebecd"
+    },
+    {
+      "filename": "existing_anthracnose_53.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0022",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "9737b23aea7a5acb"
+    },
+    {
+      "filename": "existing_anthracnose_54.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0023",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "66c0a0125ee765f9"
+    },
+    {
+      "filename": "existing_anthracnose_56.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0024",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b3e6ab255959544a"
+    },
+    {
+      "filename": "existing_anthracnose_57.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0025",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "03042d27162e283c"
+    },
+    {
+      "filename": "existing_anthracnose_6.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0026",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "0c4e8e9b112f07a5"
+    },
+    {
+      "filename": "existing_anthracnose_61.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0027",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "b4d4d8c6c6c1f427"
+    },
+    {
+      "filename": "existing_anthracnose_62.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0028",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "1b131b17174fcfaf"
+    },
+    {
+      "filename": "existing_anthracnose_63.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0029",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b0b43052c294f0a2"
+    },
+    {
+      "filename": "existing_anthracnose_64.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0030",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "cbcdcd8c0b4ec7ab"
+    },
+    {
+      "filename": "existing_anthracnose_66.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0031",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "a3323a37190d85d3"
+    },
+    {
+      "filename": "existing_anthracnose_67.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0032",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "1373731b35253529"
+    },
+    {
+      "filename": "existing_anthracnose_68.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0033",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "49526361436d6d67"
+    },
+    {
+      "filename": "existing_anthracnose_69.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0034",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "70786c7a5c6627d1"
+    },
+    {
+      "filename": "existing_anthracnose_7.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0035",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "eb68e68f9c98c9ce"
+    },
+    {
+      "filename": "existing_anthracnose_71.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0036",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "0c8f0b4649517151"
+    },
+    {
+      "filename": "existing_anthracnose_72.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0037",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "8ccc1212b233b5b6"
+    },
+    {
+      "filename": "existing_anthracnose_73.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0038",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "96168886941c0444"
+    },
+    {
+      "filename": "existing_anthracnose_74.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0039",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "c3c39317130ea1a3"
+    },
+    {
+      "filename": "existing_anthracnose_8.jpg",
+      "disease": "Anthracnose",
+      "folder": "areca_diseased_fungal_anthracnose",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0040",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "655b9d252396cc69"
+    },
+    {
+      "filename": "existing_fruit_rot_12.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0041",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "666c2c7c8e9a37a3"
+    },
+    {
+      "filename": "existing_fruit_rot_14.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0042",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "965359b931534149"
+    },
+    {
+      "filename": "existing_fruit_rot_15.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0043",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "3131715571757173"
+    },
+    {
+      "filename": "existing_fruit_rot_17.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0044",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "565ed69595b5b5b4"
+    },
+    {
+      "filename": "existing_fruit_rot_20.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0045",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "ccc85c1e9edab004"
+    },
+    {
+      "filename": "existing_fruit_rot_22.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0046",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "c4d4d8ccd4d8b0d8"
+    },
+    {
+      "filename": "existing_fruit_rot_28.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0047",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "bd4daece45737797"
+    },
+    {
+      "filename": "existing_fruit_rot_29.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0048",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "ccc8cbc9ab6ab8d8"
+    },
+    {
+      "filename": "existing_fruit_rot_30.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0049",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "60160f1931654d92"
+    },
+    {
+      "filename": "existing_fruit_rot_31.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0050",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b261c9e4e0e1612f"
+    },
+    {
+      "filename": "existing_fruit_rot_35.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0051",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b37995ababc4139c"
+    },
+    {
+      "filename": "existing_fruit_rot_38.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0052",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "5c39597b171b1d3c"
+    },
+    {
+      "filename": "existing_fruit_rot_39.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0053",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "69ae6ed826369b86"
+    },
+    {
+      "filename": "existing_fruit_rot_40.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0054",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f8f0d8d8d8f8f071"
+    },
+    {
+      "filename": "existing_fruit_rot_47.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0055",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "0e0f130717131717"
+    },
+    {
+      "filename": "existing_fruit_rot_54.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0056",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "8dcdcf8c4dcfcdef"
+    },
+    {
+      "filename": "existing_fruit_rot_56.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0057",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "dee46dada1a9cc7c"
+    },
+    {
+      "filename": "existing_fruit_rot_59.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0058",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "756ce4ecccccc1ce"
+    },
+    {
+      "filename": "existing_fruit_rot_61.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0059",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "0776e1ba57000003"
+    },
+    {
+      "filename": "existing_fruit_rot_64.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0060",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "c8c987d3c66747d3"
+    },
+    {
+      "filename": "existing_fruit_rot_65.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0061",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e6c2063cf2e187ac"
+    },
+    {
+      "filename": "existing_fruit_rot_66.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0062",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "4642607535277f7d"
+    },
+    {
+      "filename": "existing_fruit_rot_67.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0063",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "75a58d0d4d4d8e8e"
+    },
+    {
+      "filename": "existing_fruit_rot_68.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0064",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "6e6aa626d2daf1bb"
+    },
+    {
+      "filename": "existing_fruit_rot_69.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0065",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "24247373e3a2a2a2"
+    },
+    {
+      "filename": "existing_fruit_rot_7.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0066",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "b2b27169e466464f"
+    },
+    {
+      "filename": "existing_fruit_rot_70.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0067",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "cccec6868485a5c4"
+    },
+    {
+      "filename": "existing_fruit_rot_71.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0068",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "538b2c585a5b2666"
+    },
+    {
+      "filename": "existing_fruit_rot_72.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0069",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "ce8ec6c6f2bbb590"
+    },
+    {
+      "filename": "existing_fruit_rot_73.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0070",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e4cce8eeccfcfaf6"
+    },
+    {
+      "filename": "existing_fruit_rot_76.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0071",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "707576f2b726a5a6"
+    },
+    {
+      "filename": "existing_fruit_rot_77.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0072",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "98c484a4245c5a06"
+    },
+    {
+      "filename": "existing_fruit_rot_78.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0073",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "ec8c9c9891b3a3b0"
+    },
+    {
+      "filename": "existing_fruit_rot_79.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0074",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "3517130f0f33690b"
+    },
+    {
+      "filename": "existing_fruit_rot_80.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0075",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "3018c8f89b8f1717"
+    },
+    {
+      "filename": "existing_fruit_rot_84.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0076",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "93a9494b32373534"
+    },
+    {
+      "filename": "existing_fruit_rot_86.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0077",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "2537073b0f272b1f"
+    },
+    {
+      "filename": "existing_fruit_rot_88.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0078",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "4c3622144c06321d"
+    },
+    {
+      "filename": "existing_fruit_rot_9.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0079",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "c3cfcdcbd6bdb973"
+    },
+    {
+      "filename": "existing_fruit_rot_90.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0080",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "98484ccccc642d0f"
+    },
+    {
+      "filename": "existing_fruit_rot_91.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0081",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "372f2fce1e3b9ed6"
+    },
+    {
+      "filename": "existing_fruit_rot_92.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0082",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "356572622a0c349f"
+    },
+    {
+      "filename": "existing_fruit_rot_94.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0083",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "8520c04cda98f8f9"
+    },
+    {
+      "filename": "existing_fruit_rot_96.jpg",
+      "disease": "FruitRot",
+      "folder": "areca_diseased_fungal_fruit_rot",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0084",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "465c6a6b6f67787b"
+    },
+    {
+      "filename": "existing_healthy_1.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0085",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "8e9793bb68c8ca8b"
+    },
+    {
+      "filename": "existing_healthy_10.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0086",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6b73d7535a53130f"
+    },
+    {
+      "filename": "existing_healthy_11.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0087",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "d1180a16160a070f"
+    },
+    {
+      "filename": "existing_healthy_12.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0088",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "16666be56f319118"
+    },
+    {
+      "filename": "existing_healthy_13.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0089",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "4083194aab3b4b80"
+    },
+    {
+      "filename": "existing_healthy_14.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0090",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "7333091818160e0e"
+    },
+    {
+      "filename": "existing_healthy_15.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0091",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "3ccfc9d43414115b"
+    },
+    {
+      "filename": "existing_healthy_17.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0092",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "1c1c2a2363676e6e"
+    },
+    {
+      "filename": "existing_healthy_19.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0093",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b9ebe6f0a8a8c006"
+    },
+    {
+      "filename": "existing_healthy_20.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0094",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e4e3452426030504"
+    },
+    {
+      "filename": "existing_healthy_21.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0095",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "9829a1c964647c38"
+    },
+    {
+      "filename": "existing_healthy_23.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0096",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "6cedb95b1b3323b1"
+    },
+    {
+      "filename": "existing_healthy_24.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0097",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f2f23c2923181a38"
+    },
+    {
+      "filename": "existing_healthy_25.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0098",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "13130b0b2f07070e"
+    },
+    {
+      "filename": "existing_healthy_26.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0099",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "3e64e4eca6ae5eb6"
+    },
+    {
+      "filename": "existing_healthy_27.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0100",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "63a50d074b1b9353"
+    },
+    {
+      "filename": "existing_healthy_29.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0101",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "83b3a1cb663339a9"
+    },
+    {
+      "filename": "existing_healthy_3.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0102",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "c3c38b278f070606"
+    },
+    {
+      "filename": "existing_healthy_30.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0103",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "32231b1b868e4222"
+    },
+    {
+      "filename": "existing_healthy_31.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0104",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "76da98ac44ccc8ad"
+    },
+    {
+      "filename": "existing_healthy_32.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0105",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "c8484eecec8c888a"
+    },
+    {
+      "filename": "existing_healthy_35.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0106",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b7b514361f33139a"
+    },
+    {
+      "filename": "existing_healthy_36.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0107",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "12a66698bc3c3c3c"
+    },
+    {
+      "filename": "existing_healthy_37.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0108",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6666271959c9c933"
+    },
+    {
+      "filename": "existing_healthy_38.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0109",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "9070ecd8d8ba82c6"
+    },
+    {
+      "filename": "existing_healthy_42.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0110",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "26a4be8b7e233b33"
+    },
+    {
+      "filename": "existing_healthy_43.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0111",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "0c0a031395850121"
+    },
+    {
+      "filename": "existing_healthy_44.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0112",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f2f3e9ccb72f0b0b"
+    },
+    {
+      "filename": "existing_healthy_45.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0113",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "860631313537b7a7"
+    },
+    {
+      "filename": "existing_healthy_46.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0114",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "61496261696d6726"
+    },
+    {
+      "filename": "existing_healthy_47.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0115",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "841323031b1b3f0a"
+    },
+    {
+      "filename": "existing_healthy_48.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0116",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "cae36341c9b48ccc"
+    },
+    {
+      "filename": "existing_healthy_49.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0117",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "2606169617676686"
+    },
+    {
+      "filename": "existing_healthy_5.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0118",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "814a4c46878aa6a2"
+    },
+    {
+      "filename": "existing_healthy_51.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0119",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "05132361c5cd4d2d"
+    },
+    {
+      "filename": "existing_healthy_52.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0120",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "0c1f1b11290cc422"
+    },
+    {
+      "filename": "existing_healthy_53.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0121",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "3db22f2f391c3c2e"
+    },
+    {
+      "filename": "existing_healthy_54.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0122",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "92ba9a9e8d8d9d5d"
+    },
+    {
+      "filename": "existing_healthy_55.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0123",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "69eded9d8de6e4e4"
+    },
+    {
+      "filename": "existing_healthy_56.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0124",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "60646446c2801499"
+    },
+    {
+      "filename": "existing_healthy_57.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0125",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "a6a6f6ce4daaba96"
+    },
+    {
+      "filename": "existing_healthy_58.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0126",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "e6869b99250f338e"
+    },
+    {
+      "filename": "existing_healthy_59.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0127",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "c505230723451767"
+    },
+    {
+      "filename": "existing_healthy_60.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0128",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "3a1a532351898b2d"
+    },
+    {
+      "filename": "existing_healthy_62.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0129",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "676fc96575d99ea6"
+    },
+    {
+      "filename": "existing_healthy_63.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0130",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "46e2c3ec083b8faf"
+    },
+    {
+      "filename": "existing_healthy_64.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0131",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b0e4da83a78e8ccd"
+    },
+    {
+      "filename": "existing_healthy_66.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0132",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "113566c692179692"
+    },
+    {
+      "filename": "existing_healthy_67.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0133",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e1f8f0f4bccc4961"
+    },
+    {
+      "filename": "existing_healthy_68.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0134",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "a2dc8c1e79cc922b"
+    },
+    {
+      "filename": "existing_healthy_7.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0135",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "c686968f0f07070f"
+    },
+    {
+      "filename": "existing_healthy_70.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0136",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "9a3b37ad0c1ebf9f"
+    },
+    {
+      "filename": "existing_healthy_71.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0137",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "460b4d4d296d2d87"
+    },
+    {
+      "filename": "existing_healthy_72.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0138",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f91bb32fcf439be7"
+    },
+    {
+      "filename": "existing_healthy_75.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0122",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "92ba9a9e8d8d9f5d"
+    },
+    {
+      "filename": "existing_healthy_8.jpg",
+      "disease": "Healthy",
+      "folder": "areca_healthy",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0139",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f8bc87c7db1bcbf2"
+    },
+    {
+      "filename": "existing_nut_cracking_14.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0140",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "a486333936a398e5"
+    },
+    {
+      "filename": "existing_nut_cracking_15.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0141",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "96d7c756d7d1d666"
+    },
+    {
+      "filename": "existing_nut_cracking_20.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0142",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "496d2525cdd929d9"
+    },
+    {
+      "filename": "existing_nut_cracking_21.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0143",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "441a0cddd6c692b4"
+    },
+    {
+      "filename": "existing_nut_cracking_22.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0144",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e263c79ff5cc2c99"
+    },
+    {
+      "filename": "existing_nut_cracking_28.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0145",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "34539a8d1c181406"
+    },
+    {
+      "filename": "existing_nut_cracking_31.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0146",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "926e643232d44a4a"
+    },
+    {
+      "filename": "existing_nut_cracking_35.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0147",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e0c07d5b787c7e40"
+    },
+    {
+      "filename": "existing_nut_cracking_41.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0148",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "fe8d1969e5571b9e"
+    },
+    {
+      "filename": "existing_nut_cracking_42.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0149",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "65332367e7a7a258"
+    },
+    {
+      "filename": "existing_nut_cracking_43.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0150",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "5ea96b76f1295d6e"
+    },
+    {
+      "filename": "existing_nut_cracking_44.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0151",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "01112d8f8e110101"
+    },
+    {
+      "filename": "existing_nut_cracking_45.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0152",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "d94b9c9ceb495972"
+    },
+    {
+      "filename": "existing_nut_cracking_47.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0153",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "cdb4f0f874363230"
+    },
+    {
+      "filename": "existing_nut_cracking_48.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0154",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "c94b8e081998c3c1"
+    },
+    {
+      "filename": "existing_nut_cracking_49.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0155",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "cc8b232d29292903"
+    },
+    {
+      "filename": "existing_nut_cracking_51.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0156",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "335bcdae0e1a1c98"
+    },
+    {
+      "filename": "existing_nut_cracking_52.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0157",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "1b146979090c1e0c"
+    },
+    {
+      "filename": "existing_nut_cracking_53.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0158",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6d0cd29ca1d1e87c"
+    },
+    {
+      "filename": "existing_nut_cracking_56.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0159",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "2565652523637273"
+    },
+    {
+      "filename": "existing_nut_cracking_58.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0160",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "77074767654d1d09"
+    },
+    {
+      "filename": "existing_nut_cracking_60.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0161",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "989c2e16c6b4b8d8"
+    },
+    {
+      "filename": "existing_nut_cracking_63.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0162",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "7af969a92d3b3761"
+    },
+    {
+      "filename": "existing_nut_cracking_64.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0163",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "51b29e8f0f73238e"
+    },
+    {
+      "filename": "existing_nut_cracking_65.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0164",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "30e4327240b40302"
+    },
+    {
+      "filename": "existing_nut_cracking_67.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0165",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "288bd3305d45212c"
+    },
+    {
+      "filename": "existing_nut_cracking_71.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0166",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "b6c5c1918a4da56d"
+    },
+    {
+      "filename": "existing_nut_cracking_72.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0167",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6666dc83d587061d"
+    },
+    {
+      "filename": "existing_nut_cracking_8.jpg",
+      "disease": "NutCracking",
+      "folder": "areca_diseased_physiological_nut_cracking",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0168",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "4e48696943941d4f"
+    },
+    {
+      "filename": "existing_sooty_mold_1.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0169",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "69c54512a3b4b594"
+    },
+    {
+      "filename": "existing_sooty_mold_13.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0170",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6aada55cc9933409"
+    },
+    {
+      "filename": "existing_sooty_mold_14.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0171",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "40249874f48d6918"
+    },
+    {
+      "filename": "existing_sooty_mold_18.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0172",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "e0f4d4d1f0a6c6d2"
+    },
+    {
+      "filename": "existing_sooty_mold_19.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0173",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "eab6a7e7e9c2fb7c"
+    },
+    {
+      "filename": "existing_sooty_mold_2.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0174",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "d0d19391c1b4a4e4"
+    },
+    {
+      "filename": "existing_sooty_mold_21.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0175",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "663523231c32b667"
+    },
+    {
+      "filename": "existing_sooty_mold_22.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0176",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "393931371e4e2694"
+    },
+    {
+      "filename": "existing_sooty_mold_23.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0177",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "581c0b860e6e6d64"
+    },
+    {
+      "filename": "existing_sooty_mold_27.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0178",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "2623c3c5c486aea5"
+    },
+    {
+      "filename": "existing_sooty_mold_28.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0179",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "0222737333328e1b"
+    },
+    {
+      "filename": "existing_sooty_mold_3.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0180",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f3f87ce8a8b5b1ad"
+    },
+    {
+      "filename": "existing_sooty_mold_30.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0181",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "5a7a9aa7e6aaa9b8"
+    },
+    {
+      "filename": "existing_sooty_mold_31.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0182",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "5c21637372721a1a"
+    },
+    {
+      "filename": "existing_sooty_mold_32.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0183",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "be3cacac9494c903"
+    },
+    {
+      "filename": "existing_sooty_mold_33.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0184",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "60c8486ccbd1dc12"
+    },
+    {
+      "filename": "existing_sooty_mold_37.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0185",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "2124343b93d2b333"
+    },
+    {
+      "filename": "existing_sooty_mold_38.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0186",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "ccc58d80f29e4501"
+    },
+    {
+      "filename": "existing_sooty_mold_4.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0187",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "02aaa48543244940"
+    },
+    {
+      "filename": "existing_sooty_mold_40.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0188",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "8e9683c3d1d3d6d7"
+    },
+    {
+      "filename": "existing_sooty_mold_41.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0189",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "31eb468fa6a63b36"
+    },
+    {
+      "filename": "existing_sooty_mold_43.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0190",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "a3d36b318dc93d0a"
+    },
+    {
+      "filename": "existing_sooty_mold_44.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0191",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "4598d3d3cccdc303"
+    },
+    {
+      "filename": "existing_sooty_mold_45.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0192",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "981d4e47410d8b51"
+    },
+    {
+      "filename": "existing_sooty_mold_46.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0193",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "c1c349d57531d616"
+    },
+    {
+      "filename": "existing_sooty_mold_49.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0194",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "d60c21cc9e9d99f9"
+    },
+    {
+      "filename": "existing_sooty_mold_51.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0195",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "999b91899934b634"
+    },
+    {
+      "filename": "existing_sooty_mold_53.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0196",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "3eccc9bbfb5a1919"
+    },
+    {
+      "filename": "existing_sooty_mold_54.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0197",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "f1f183d6dce0670b"
+    },
+    {
+      "filename": "existing_sooty_mold_55.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0198",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "22069d6646cc0d49"
+    },
+    {
+      "filename": "existing_sooty_mold_56.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0199",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6767f0f0c960042b"
+    },
+    {
+      "filename": "existing_sooty_mold_57.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0200",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "d2daf8bcecccd9a4"
+    },
+    {
+      "filename": "existing_sooty_mold_59.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0201",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "57d251515a5adcc9"
+    },
+    {
+      "filename": "existing_sooty_mold_60.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0202",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "6437e372a28de516"
+    },
+    {
+      "filename": "existing_sooty_mold_61.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0203",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "f0f1f0e0f07072b2"
+    },
+    {
+      "filename": "existing_sooty_mold_63.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0204",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "968e072749313333"
+    },
+    {
+      "filename": "existing_sooty_mold_65.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0205",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "3494aca9f031311b"
+    },
+    {
+      "filename": "existing_sooty_mold_66.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0206",
+      "cv_fold": 0,
+      "variant_a_split": "val",
+      "variant_b_split": "val",
+      "dhash_hex": "66c717c6e47e1d03"
+    },
+    {
+      "filename": "existing_sooty_mold_67.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0207",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "998e8631717c3e9c"
+    },
+    {
+      "filename": "existing_sooty_mold_69.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0208",
+      "cv_fold": 1,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "4f49c1456312ae8e"
+    },
+    {
+      "filename": "existing_sooty_mold_7.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0209",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "15282921b0b1b1b2"
+    },
+    {
+      "filename": "existing_sooty_mold_70.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0210",
+      "cv_fold": 2,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "b2222b13054cce8a"
+    },
+    {
+      "filename": "existing_sooty_mold_72.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0211",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "67c3163e49d2a646"
+    },
+    {
+      "filename": "existing_sooty_mold_73.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0212",
+      "cv_fold": 4,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "1453c60f061d2564"
+    },
+    {
+      "filename": "existing_sooty_mold_8.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0213",
+      "cv_fold": 5,
+      "variant_a_split": "test",
+      "variant_b_split": "test",
+      "dhash_hex": "cc684d9f963c6cc6"
+    },
+    {
+      "filename": "existing_sooty_mold_9.jpg",
+      "disease": "SootyMold",
+      "folder": "areca_diseased_fungal_sooty_mold",
+      "is_seed": false,
+      "cluster_id": "real_cluster_0214",
+      "cv_fold": 3,
+      "variant_a_split": "train",
+      "variant_b_split": "train",
+      "dhash_hex": "58644c8caccc78b8"
+    },
+    {
+      "filename": "seed_00.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_000",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67ce9ab2b1b31d99"
+    },
+    {
+      "filename": "seed_01.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_001",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "7218aee6e6f4d5d6"
+    },
+    {
+      "filename": "seed_02.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_002",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "63e79b9991d0105e"
+    },
+    {
+      "filename": "seed_03.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_003",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0c1a33b2fa6b63f3"
+    },
+    {
+      "filename": "seed_04.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_004",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0609b9b9f97d3161"
+    },
+    {
+      "filename": "seed_05.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_005",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67cd99b930b45497"
+    },
+    {
+      "filename": "seed_06.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_006",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "470f3133e228299c"
+    },
+    {
+      "filename": "seed_07.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_007",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "094e66f2f4f406c3"
+    },
+    {
+      "filename": "seed_08.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_008",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "99cda6727274c4c2"
+    },
+    {
+      "filename": "seed_09.jpg",
+      "disease": "BudBorer",
+      "folder": "areca_pest_bud_borer",
+      "is_seed": true,
+      "cluster_id": "seed_BudBorer_cluster_009",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "3a186e66f6f4c487"
+    },
+    {
+      "filename": "seed_00.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_000",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67ce9ab2b1b31d99"
+    },
+    {
+      "filename": "seed_01.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_001",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "7218aee6e6f4d5d6"
+    },
+    {
+      "filename": "seed_02.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_002",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "63e79b9991d0105e"
+    },
+    {
+      "filename": "seed_03.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_003",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0c1a33b2fa6b63f3"
+    },
+    {
+      "filename": "seed_04.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_004",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0609b9b9f97d3161"
+    },
+    {
+      "filename": "seed_05.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_005",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67cd99b930b45497"
+    },
+    {
+      "filename": "seed_06.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_006",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "470f3133e228299c"
+    },
+    {
+      "filename": "seed_07.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_007",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "094e66f2f4f406c3"
+    },
+    {
+      "filename": "seed_08.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_008",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "99cda6727274c4c2"
+    },
+    {
+      "filename": "seed_09.jpg",
+      "disease": "LeafSpotComplex",
+      "folder": "areca_diseased_fungal_leaf_spot",
+      "is_seed": true,
+      "cluster_id": "seed_LeafSpotComplex_cluster_009",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "3a186e66f6f4c487"
+    },
+    {
+      "filename": "seed_00.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_000",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67ce9ab2b1b31d99"
+    },
+    {
+      "filename": "seed_01.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_001",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "7218aee6e6f4d5d6"
+    },
+    {
+      "filename": "seed_02.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_002",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "63e79b9991d0105e"
+    },
+    {
+      "filename": "seed_03.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_003",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0c1a33b2fa6b63f3"
+    },
+    {
+      "filename": "seed_04.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_004",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0609b9b9f97d3161"
+    },
+    {
+      "filename": "seed_05.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_005",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67cd99b930b45497"
+    },
+    {
+      "filename": "seed_06.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_006",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "470f3133e228299c"
+    },
+    {
+      "filename": "seed_07.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_007",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "094e66f2f4f406c3"
+    },
+    {
+      "filename": "seed_08.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_008",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "99cda6727274c4c2"
+    },
+    {
+      "filename": "seed_09.jpg",
+      "disease": "PhytoplasmaYellowLeaf",
+      "folder": "areca_diseased_phytoplasma_yellow_leaf",
+      "is_seed": true,
+      "cluster_id": "seed_PhytoplasmaYellowLeaf_cluster_009",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "3a186e66f6f4c487"
+    },
+    {
+      "filename": "seed_00.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_000",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67ce9ab2b1b31d99"
+    },
+    {
+      "filename": "seed_01.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_001",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "7218aee6e6f4d5d6"
+    },
+    {
+      "filename": "seed_02.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_002",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "63e79b9991d0105e"
+    },
+    {
+      "filename": "seed_03.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_003",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0c1a33b2fa6b63f3"
+    },
+    {
+      "filename": "seed_04.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_004",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0609b9b9f97d3161"
+    },
+    {
+      "filename": "seed_05.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_005",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67cd99b930b45497"
+    },
+    {
+      "filename": "seed_06.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_006",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "470f3133e228299c"
+    },
+    {
+      "filename": "seed_07.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_007",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "094e66f2f4f406c3"
+    },
+    {
+      "filename": "seed_08.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_008",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "99cda6727274c4c2"
+    },
+    {
+      "filename": "seed_09.jpg",
+      "disease": "StemBleeding",
+      "folder": "areca_diseased_fungal_stem_bleeding",
+      "is_seed": true,
+      "cluster_id": "seed_StemBleeding_cluster_009",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "3a186e66f6f4c487"
+    },
+    {
+      "filename": "seed_00.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_000",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67ce9ab2b1b31d99"
+    },
+    {
+      "filename": "seed_01.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_001",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "7218aee6e6f4d5d6"
+    },
+    {
+      "filename": "seed_02.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_002",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "63e79b9991d0105e"
+    },
+    {
+      "filename": "seed_03.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_003",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0c1a33b2fa6b63f3"
+    },
+    {
+      "filename": "seed_04.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_004",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0609b9b9f97d3161"
+    },
+    {
+      "filename": "seed_05.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_005",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67cd99b930b45497"
+    },
+    {
+      "filename": "seed_06.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_006",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "470f3133e228299c"
+    },
+    {
+      "filename": "seed_07.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_007",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "094e66f2f4f406c3"
+    },
+    {
+      "filename": "seed_08.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_008",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "99cda6727274c4c2"
+    },
+    {
+      "filename": "seed_09.jpg",
+      "disease": "StemCracking",
+      "folder": "areca_diseased_physiological_stem_cracking",
+      "is_seed": true,
+      "cluster_id": "seed_StemCracking_cluster_009",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "3a186e66f6f4c487"
+    },
+    {
+      "filename": "seed_00.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_000",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67ce9ab2b1b31d99"
+    },
+    {
+      "filename": "seed_01.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_001",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "7218aee6e6f4d5d6"
+    },
+    {
+      "filename": "seed_02.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_002",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "63e79b9991d0105e"
+    },
+    {
+      "filename": "seed_03.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_003",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0c1a33b2fa6b63f3"
+    },
+    {
+      "filename": "seed_04.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_004",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "0609b9b9f97d3161"
+    },
+    {
+      "filename": "seed_05.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_005",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "67cd99b930b45497"
+    },
+    {
+      "filename": "seed_06.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_006",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "470f3133e228299c"
+    },
+    {
+      "filename": "seed_07.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_007",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "094e66f2f4f406c3"
+    },
+    {
+      "filename": "seed_08.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_008",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "99cda6727274c4c2"
+    },
+    {
+      "filename": "seed_09.jpg",
+      "disease": "YellowLeaf",
+      "folder": "areca_diseased_yellow_leaf_chlorosis",
+      "is_seed": true,
+      "cluster_id": "seed_YellowLeaf_cluster_009",
+      "cv_fold": -1,
+      "variant_a_split": "train",
+      "variant_b_split": "excluded",
+      "dhash_hex": "3a186e66f6f4c487"
+    }
+  ],
+  "manifest_sha256": "90608473BC97F173229A12EBFF0E2CDFD473BE7A8BB433242593B75E1265227A"
+}

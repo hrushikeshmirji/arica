@@ -1,0 +1,4656 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generator": "build_clean_dataset.py",
+    "date": "2026-10-12",
+    "leakage_free": true,
+    "seed_quarantined": true
+  },
+  "summary": {
+    "total_raw": 652,
+    "excluded_conflicts": 131,
+    "excluded_intra_duplicates": 0,
+    "total_retained": 522,
+    "train_count": 479,
+    "val_count": 43,
+    "seed_in_val_count": 0,
+    "cross_split_leakage_hamming_le_6": 0,
+    "train_by_class": {
+      "areca_diseased_fungal_leaf_spot": 51,
+      "areca_pest_bud_borer": 51,
+      "areca_diseased_yellow_leaf_chlorosis": 51,
+      "areca_diseased_phytoplasma_yellow_leaf": 51,
+      "areca_diseased_physiological_stem_cracking": 51,
+      "areca_diseased_fungal_stem_bleeding": 51,
+      "areca_healthy": 45,
+      "areca_diseased_fungal_anthracnose": 33,
+      "areca_diseased_fungal_fruit_rot": 35,
+      "areca_diseased_fungal_sooty_mold": 37,
+      "areca_diseased_physiological_nut_cracking": 23
+    },
+    "val_by_class": {
+      "areca_healthy": 11,
+      "areca_diseased_fungal_anthracnose": 8,
+      "areca_diseased_fungal_fruit_rot": 9,
+      "areca_diseased_fungal_sooty_mold": 9,
+      "areca_diseased_physiological_nut_cracking": 6
+    },
+    "total_clusters": 264
+  },
+  "train": [
+    {
+      "file": "seed_01.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_01.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_15.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_01.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_01.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_15.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_01.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_01.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_15.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_01.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_01.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_15.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_01.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_01.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_15.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_01.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_01.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_15.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0086",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_09.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_09.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_22.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_09.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_09.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_22.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_09.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_09.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_22.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_09.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_09.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_22.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_09.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_09.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_22.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_09.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_09.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_22.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0094",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_00.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_00.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0085",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_00.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_00.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0085",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_00.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_00.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0085",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_00.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_00.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0085",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_00.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_00.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0085",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_00.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_00.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0085",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_02.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_02.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0087",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_02.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_02.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0087",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_02.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_02.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0087",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_02.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_02.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0087",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_02.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_02.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0087",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_02.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_02.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0087",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_03.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_03.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0088",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_03.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_03.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0088",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_03.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_03.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0088",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_03.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_03.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0088",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_03.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_03.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0088",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_03.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_03.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0088",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_04.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_04.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0089",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_04.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_04.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0089",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_04.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_04.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0089",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_04.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_04.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0089",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_04.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_04.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0089",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_04.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_04.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0089",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_05.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_05.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0090",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_05.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_05.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0090",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_05.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_05.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0090",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_05.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_05.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0090",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_05.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_05.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0090",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_05.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_05.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0090",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_06.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_06.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0091",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_06.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_06.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0091",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_06.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_06.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0091",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_06.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_06.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0091",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_06.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_06.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0091",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_06.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_06.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0091",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_07.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_07.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0092",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_07.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_07.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0092",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_07.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_07.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0092",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_07.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_07.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0092",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_07.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_07.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0092",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_07.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_07.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0092",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_08.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_08.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0093",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_08.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_08.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0093",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_08.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_08.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0093",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_08.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_08.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0093",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_08.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_08.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0093",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_08.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_08.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0093",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_10.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0095",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_10.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0095",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_10.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0095",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_10.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0095",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_10.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0095",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_10.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0095",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_11.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0096",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_11.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0096",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_11.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0096",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_11.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0096",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_11.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0096",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_11.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0096",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_12.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0097",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_12.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0097",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_12.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0097",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_12.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0097",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_12.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0097",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_12.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0097",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_13.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0098",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_13.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0098",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_13.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0098",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_13.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0098",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_13.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0098",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_13.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0098",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_14.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0099",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_14.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0099",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_14.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0099",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_14.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0099",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_14.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0099",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_14.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0099",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_16.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_16.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0100",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_16.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_16.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0100",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_16.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_16.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0100",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_16.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_16.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0100",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_16.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_16.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0100",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_16.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_16.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0100",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_17.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0101",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_17.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0101",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_17.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0101",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_17.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0101",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_17.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0101",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_17.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0101",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_18.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0102",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_18.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0102",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_18.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0102",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_18.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0102",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_18.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0102",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_18.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0102",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_19.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0103",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_19.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0103",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_19.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0103",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_19.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0103",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_19.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0103",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_19.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0103",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_20.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0104",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_20.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0104",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_20.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0104",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_20.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0104",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_20.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0104",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_20.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0104",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_21.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0105",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_21.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0105",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_21.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0105",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_21.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0105",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_21.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0105",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_21.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0105",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_23.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0106",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_23.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0106",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_23.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0106",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_23.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0106",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_23.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0106",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_23.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0106",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_24.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0107",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_24.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0107",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_24.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0107",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_24.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0107",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_24.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0107",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_24.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0107",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_25.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0108",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_25.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0108",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_25.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0108",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_25.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0108",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_25.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0108",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_25.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0108",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_26.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0109",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_26.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0109",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_26.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0109",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_26.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0109",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_26.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0109",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_26.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0109",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_27.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0110",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_27.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0110",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_27.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0110",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_27.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0110",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_27.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0110",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_27.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0110",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_28.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0111",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_28.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0111",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_28.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0111",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_28.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0111",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_28.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0111",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_28.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0111",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_29.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0112",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_29.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0112",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_29.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0112",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_29.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0112",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_29.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0112",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_29.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0112",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_30.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0113",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_30.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0113",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_30.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0113",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_30.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0113",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_30.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0113",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_30.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0113",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_31.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0114",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_31.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0114",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_31.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0114",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_31.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0114",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_31.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0114",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_31.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0114",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_32.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0115",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_32.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0115",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_32.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0115",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_32.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0115",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_32.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0115",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_32.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0115",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_33.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0116",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_33.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0116",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_33.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0116",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_33.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0116",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_33.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0116",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_33.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0116",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_34.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0117",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_34.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0117",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_34.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0117",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_34.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0117",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_34.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0117",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_34.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0117",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_35.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0118",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_35.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0118",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_35.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0118",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_35.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0118",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_35.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0118",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_35.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0118",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_36.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0119",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_36.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0119",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_36.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0119",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_36.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0119",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_36.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0119",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_36.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0119",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_37.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0120",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_37.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0120",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_37.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0120",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_37.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0120",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_37.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0120",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_37.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0120",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_38.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0121",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_38.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0121",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_38.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0121",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_38.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0121",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_38.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0121",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_38.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0121",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_39.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0122",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_39.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0122",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_39.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0122",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_39.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0122",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_39.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0122",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_39.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0122",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_40.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0123",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_40.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0123",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_40.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0123",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_40.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0123",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_40.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0123",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_40.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0123",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_41.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0124",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_41.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0124",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_41.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0124",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_41.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0124",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_41.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0124",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_41.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0124",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_42.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0125",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_42.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0125",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_42.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0125",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_42.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0125",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_42.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0125",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_42.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0125",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_43.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0126",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_43.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0126",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_43.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0126",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_43.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0126",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_43.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0126",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_43.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0126",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_44.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0127",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_44.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0127",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_44.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0127",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_44.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0127",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_44.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0127",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_44.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0127",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_45.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0128",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_45.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0128",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_45.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0128",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_45.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0128",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_45.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0128",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_45.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0128",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_46.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0129",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_46.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0129",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_46.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0129",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_46.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0129",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_46.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0129",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_46.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0129",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_47.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0130",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_47.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0130",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_47.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0130",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_47.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0130",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_47.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0130",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_47.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0130",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_48.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0131",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_48.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0131",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_48.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0131",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_48.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0131",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_48.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0131",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_48.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0131",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_49.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0132",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_49.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0132",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_49.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0132",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_49.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0132",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_49.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0132",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_49.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0132",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_50.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_leaf_spot\\seed_50.jpg",
+      "class": "areca_diseased_fungal_leaf_spot",
+      "cluster_id": "cluster_0133",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_50.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_pest_bud_borer\\seed_50.jpg",
+      "class": "areca_pest_bud_borer",
+      "cluster_id": "cluster_0133",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_50.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_yellow_leaf_chlorosis\\seed_50.jpg",
+      "class": "areca_diseased_yellow_leaf_chlorosis",
+      "cluster_id": "cluster_0133",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_50.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_phytoplasma_yellow_leaf\\seed_50.jpg",
+      "class": "areca_diseased_phytoplasma_yellow_leaf",
+      "cluster_id": "cluster_0133",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_50.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_stem_cracking\\seed_50.jpg",
+      "class": "areca_diseased_physiological_stem_cracking",
+      "cluster_id": "cluster_0133",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "seed_50.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_stem_bleeding\\seed_50.jpg",
+      "class": "areca_diseased_fungal_stem_bleeding",
+      "cluster_id": "cluster_0133",
+      "is_seed": true,
+      "quarantine_reason": "seed_class_synthetic_origin"
+    },
+    {
+      "file": "existing_healthy_11.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_11.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0211",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_49.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0241",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_5.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_5.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0242",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_17.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0216",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_29.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0225",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_14.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0214",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_12.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0212",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_66.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_66.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0256",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_43.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0235",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_64.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_64.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0255",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_63.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_63.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0254",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_72.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_72.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0262",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_26.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_26.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0223",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_19.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0217",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_27.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0224",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_37.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0232",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_46.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0238",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_53.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_53.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0245",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_38.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0233",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_21.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0219",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_54.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_54.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0246",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_75.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_75.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0246",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_67.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_67.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0257",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_52.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_52.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0244",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_45.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0237",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_57.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_57.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0249",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_1.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_1.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0209",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_32.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0229",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_10.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0210",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_7.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_7.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0259",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_56.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_56.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0248",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_51.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_51.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0243",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_36.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0231",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_62.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_62.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0253",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_20.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0218",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_35.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0230",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_3.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_3.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0226",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_8.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_8.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0263",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_31.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0228",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_15.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0215",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_59.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_59.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0251",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_25.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_25.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0222",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_44.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0236",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_70.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_70.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0260",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_55.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_55.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0247",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_34.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_34.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0010",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_31.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0008",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_54.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_54.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0023",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_71.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_71.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0036",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_49.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0020",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_56.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_56.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0024",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_37.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0012",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_2.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_2.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0004",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_44.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0018",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_62.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_62.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0028",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_74.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_74.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0039",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_4.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_4.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0014",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_41.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0015",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_72.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_72.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0037",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_63.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_63.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0029",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_64.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_64.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0030",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_68.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_68.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0033",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_36.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_36.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0011",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_57.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_57.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0025",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_43.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0017",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_66.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_66.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0031",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_73.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_73.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0038",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_33.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0009",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_51.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_51.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0021",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_20.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0005",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_15.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0001",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_18.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0003",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_7.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_7.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0035",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_42.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0016",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_38.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0013",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_69.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_69.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0034",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_28.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0007",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_22.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0006",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_31.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0050",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_7.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_7.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0066",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_59.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_59.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0058",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_9.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_9.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0079",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_40.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0054",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_47.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0055",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_91.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_91.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0081",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_61.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_61.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0059",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_70.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_70.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0067",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_66.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_66.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0062",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_73.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_73.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0070",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_72.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_72.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0069",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_15.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0043",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_79.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_79.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0074",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_69.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_69.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0065",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_67.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_67.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0063",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_54.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_54.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0056",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_94.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_94.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0083",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_14.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0042",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_38.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0052",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_88.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_88.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0078",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_30.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0049",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_28.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0047",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_71.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_71.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0068",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_20.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0045",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_78.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_78.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0073",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_86.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_86.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0077",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_80.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_80.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0075",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_92.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_92.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0082",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_56.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_56.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0057",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_35.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0051",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_96.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_96.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0084",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_29.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_29.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0048",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_12.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_12.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0041",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_68.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_68.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0064",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_14.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0136",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_49.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0159",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_7.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_7.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0174",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_72.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_72.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0176",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_56.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_56.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0164",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_23.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0142",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_37.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_37.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0150",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_1.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_1.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0134",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_59.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_59.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0166",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_28.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0144",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_40.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_40.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0153",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_69.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_69.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0173",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_3.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_3.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0145",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_2.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_2.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0139",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_41.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0154",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_46.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_46.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0158",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_61.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_61.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0168",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_27.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_27.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0143",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_13.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0135",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_53.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_53.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0161",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_43.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0155",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_4.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_4.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0152",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_51.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_51.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0160",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_21.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0140",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_9.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_9.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0179",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_8.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_8.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0178",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_54.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_54.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0162",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_32.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_32.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0148",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_44.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0156",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_65.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_65.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0170",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_55.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_55.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0163",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_18.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_18.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0137",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_73.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_73.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0177",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_67.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_67.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0172",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_57.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_57.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0165",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_30.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0146",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_70.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_70.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0175",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_21.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_21.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0183",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_65.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_65.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0204",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_58.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_58.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0200",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_43.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_43.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0190",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_45.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0192",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_35.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_35.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0187",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_71.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_71.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0206",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_22.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0184",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_14.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_14.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0180",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_20.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_20.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0182",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_15.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_15.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0181",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_31.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0186",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_8.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_8.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0208",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_63.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_63.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0202",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_67.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_67.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0205",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_51.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_51.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0196",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_56.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_56.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0199",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_41.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_41.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0188",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_72.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_72.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0207",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_60.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_60.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0201",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_48.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0194",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_64.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_64.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0203",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_44.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_44.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0191",
+      "is_seed": false
+    }
+  ],
+  "val": [
+    {
+      "file": "existing_healthy_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_47.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0239",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_13.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_13.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0213",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_48.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_48.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0240",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_24.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_24.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0221",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_30.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_30.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0227",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_68.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_68.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0258",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_58.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_58.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0250",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_42.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0234",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_60.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_60.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0252",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_23.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_23.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0220",
+      "is_seed": false
+    },
+    {
+      "file": "existing_healthy_71.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_healthy\\existing_healthy_71.jpg",
+      "class": "areca_healthy",
+      "cluster_id": "cluster_0261",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_61.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_61.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0027",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_53.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_53.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0022",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_17.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0002",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_67.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_67.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0032",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_10.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_10.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0000",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_6.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_6.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0026",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_8.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_8.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0040",
+      "is_seed": false
+    },
+    {
+      "file": "existing_anthracnose_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_anthracnose\\existing_anthracnose_45.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "cluster_id": "cluster_0019",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_90.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_90.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0080",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_84.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_84.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0076",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_17.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_17.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0044",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_64.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_64.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0060",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_65.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_65.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0061",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_39.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_39.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0053",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_22.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0046",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_76.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_76.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0071",
+      "is_seed": false
+    },
+    {
+      "file": "existing_fruit_rot_77.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_fruit_rot\\existing_fruit_rot_77.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "cluster_id": "cluster_0072",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_45.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_45.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0157",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_63.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_63.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0169",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_31.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_31.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0147",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_22.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_22.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0141",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_19.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_19.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0138",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_33.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_33.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0149",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_60.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_60.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0167",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_66.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_66.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0171",
+      "is_seed": false
+    },
+    {
+      "file": "existing_sooty_mold_38.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_fungal_sooty_mold\\existing_sooty_mold_38.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "cluster_id": "cluster_0151",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_53.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_53.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0198",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_49.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_49.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0195",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_42.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_42.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0189",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_52.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_52.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0197",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_47.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_47.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0193",
+      "is_seed": false
+    },
+    {
+      "file": "existing_nut_cracking_28.jpg",
+      "path": "D:\\dataset_raw\\dataset_raw\\areca_diseased_physiological_nut_cracking\\existing_nut_cracking_28.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "cluster_id": "cluster_0185",
+      "is_seed": false
+    }
+  ],
+  "excluded": [
+    {
+      "file": "existing_anthracnose_1.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_11.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_12.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_13.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_14.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_16.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_19.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_21.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_23.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_24.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_25.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_26.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_27.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_29.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_30.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_32.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_35.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_39.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_46.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_47.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_48.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_5.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_52.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_55.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_59.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_60.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_65.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_70.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_anthracnose_9.jpg",
+      "class": "areca_diseased_fungal_anthracnose",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_1.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_10.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_13.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_18.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_19.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_2.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_21.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_23.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_24.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_25.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_3.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_36.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_4.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_44.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_45.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_46.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_49.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_5.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_51.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_52.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_55.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_57.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_58.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_60.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_62.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_63.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_74.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_75.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_8.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_83.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_87.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_89.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_93.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_fruit_rot_95.jpg",
+      "class": "areca_diseased_fungal_fruit_rot",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_12.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_15.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_17.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_20.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_24.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_25.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_29.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_42.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_47.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_52.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_62.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_68.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_sooty_mold_71.jpg",
+      "class": "areca_diseased_fungal_sooty_mold",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_1.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_10.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_11.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_12.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_13.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_16.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_17.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_18.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_19.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_2.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_23.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_24.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_25.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_27.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_29.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_3.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_30.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_33.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_36.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_38.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_39.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_4.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_5.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_50.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_54.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_55.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_57.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_59.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_6.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_61.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_62.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_66.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_68.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_69.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_7.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_70.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_nut_cracking_9.jpg",
+      "class": "areca_diseased_physiological_nut_cracking",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_16.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_18.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_2.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_22.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_28.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_33.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_34.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_39.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_4.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_40.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_41.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_50.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_6.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_61.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_69.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_73.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    },
+    {
+      "file": "existing_healthy_9.jpg",
+      "class": "areca_healthy",
+      "reason": "cross_class_conflict"
+    }
+  ]
+}

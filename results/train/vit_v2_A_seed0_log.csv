@@ -1,0 +1,2 @@
+epoch,train_loss,train_acc,val_loss,val_acc,val_macro_f1_real,lr,epoch_time_s,timestamp
+1,2.0454,0.3971,2.0924,0.3056,0.2676,2.500000e-05,59.35,2026-10-13T07:00:17.986863Z

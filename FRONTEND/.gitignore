@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+.cache/
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+
+# Environment & Secrets
+.env
+.env*
+.env.local
+.env.*.local
+
+# Testing & Dev-tool caches
+.playwright-mcp/
+screenshots/
+scratch/
+.claude/
+.claude-replay.*
+
+# Archives & Temporary files
+*.zip
+*.log
+*-debug.log*
+logs/
+.tmp-*

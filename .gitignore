@@ -1,0 +1,73 @@
+# Dependencies and Virtual Environments
+node_modules/
+FRONTEND/node_modules/
+backend/venv/
+venv/
+.venv/
+env/
+
+# Build artifacts
+FRONTEND/dist/
+dist/
+build/
+
+# Python cache & testing
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Databases and Runtime Data
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+
+# Machine Learning Large Weights (>100MB / binary models)
+*.pth
+*.pt
+yolov8n.pt
+
+# Machine Learning Datasets & Heavy Artifacts
+runs/
+backend/runs/
+dataset_hardcore_expanded/
+backend/data/curated_clean_dataset/
+backend/data/external_arecanut/
+backend/data/kaggle_arecanut_candidate/
+backend/data/dataset_*/
+backend/data/*/*.jpg
+backend/data/*/*.jpeg
+backend/data/*/*.png
+backend/yolo/dataset/
+backend/yolo/dataset_*/
+backend/yolo/annotation_bundle_*/
+backend/yolo/annotation_workflow_*/
+backend/tests/results/
+
+# Environment Configuration and Secrets (DO NOT COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+FRONTEND/.env.local
+
+# OS, IDE, Agent & Tool Caches
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.backup
+.backup/
+.agents/
+.specify/
+.playwright-mcp/

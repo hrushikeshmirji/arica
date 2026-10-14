@@ -1,0 +1,35 @@
+{
+  "vit_benchmark": {
+    "batch_size": 8,
+    "resolution": 224,
+    "seconds_per_batch": 1.8223,
+    "individual_runs_s": [
+      1.8511,
+      1.8771,
+      1.7386
+    ],
+    "batches_per_epoch": 60,
+    "max_epochs_per_variant": 20,
+    "num_variants": 2,
+    "total_train_batches": 2400,
+    "estimated_total_hours": 1.4,
+    "exceeds_4h": false
+  },
+  "yolo_benchmark": {
+    "batch_size": 8,
+    "resolution": 640,
+    "seconds_per_batch": 2.1531,
+    "individual_runs_s": [
+      2.1989,
+      2.1221,
+      2.1381
+    ],
+    "batches_per_epoch": 20,
+    "planned_epochs_per_variant": 100,
+    "num_variants": 2,
+    "total_train_batches": 4000,
+    "estimated_total_hours": 2.63,
+    "exceeds_4h": false
+  },
+  "exceeds_4h_overall": false
+}

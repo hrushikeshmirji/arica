@@ -1,0 +1,36 @@
+{
+  "latency": {
+    "preprocess_ms": 12.893739999963145,
+    "gatekeeper_ms": 56.33767399984208,
+    "vit_ms": 303.2105479999336,
+    "attention_ms": 0.24727400003030198,
+    "total_ms": 372.68923599976915,
+    "fps": 2.6832006492417704
+  },
+  "stress_benchmarks": [
+    {
+      "condition": "Clean (Standard Daylight)",
+      "gate_accuracy": 99.14,
+      "vit_accuracy": 63.61,
+      "macro_f1": 63.8
+    },
+    {
+      "condition": "High-ISO Sensor Noise",
+      "gate_accuracy": 97.13,
+      "vit_accuracy": 62.75,
+      "macro_f1": 62.89
+    },
+    {
+      "condition": "High Canopy Sun Glare",
+      "gate_accuracy": 98.85,
+      "vit_accuracy": 63.61,
+      "macro_f1": 63.53
+    },
+    {
+      "condition": "Motion / Defocus Blur",
+      "gate_accuracy": 98.85,
+      "vit_accuracy": 64.47,
+      "macro_f1": 64.31
+    }
+  ]
+}

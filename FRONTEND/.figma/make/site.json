@@ -1,0 +1,11 @@
+{
+  "title": "ArecaVision AI — Precision Agriculture Dashboard",
+  "description": "AI-powered Areca Nut disease detection and plantation management dashboard using CNN, ViT, and YOLOv8 ensemble models.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

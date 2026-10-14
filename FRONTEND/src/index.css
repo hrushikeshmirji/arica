@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tailwind v4: map CSS variables to utility classes via @theme */
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-surface: var(--color-surface);
+  --color-card: var(--color-card);
+  --color-card-hover: var(--color-card-hover);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-danger: var(--color-danger);
+  --color-error: var(--color-error);
+  --color-border: var(--color-border);
+  --color-input: var(--color-input);
+  --color-ring: var(--color-ring);
+  --color-navbar: var(--color-navbar);
+  --color-sidebar: var(--color-sidebar);
+  --color-footer: var(--color-footer);
+}
+
+:root {
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-card-hover: #f1f5f9;
+  --color-primary: #047857;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f5f9;
+  --color-accent: #0ea5e9;
+  --color-muted: #e2e8f0;
+  --color-muted-foreground: #64748b;
+  --color-success: #047857;
+  --color-warning: #b45309;
+  --color-danger: #dc2626;
+  --color-error: #dc2626;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #047857;
+  --color-navbar: #ffffff;
+  --color-sidebar: #ffffff;
+  --color-footer: #ffffff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08);
+  --radius: 0.75rem;
+
+  /* 5-Step Severity Scale Tokens */
+  --severity-healthy: #047857;
+  --severity-mild: #3b82f6;
+  --severity-moderate: #b45309;
+  --severity-severe: #f97316;
+  --severity-critical: #dc2626;
+
+  /* Navigation Item Contrast Tokens (Light) */
+  --nav-active-bg: #ecfdf5;
+  --nav-active-text: #065f46;
+  --nav-active-border: #a7f3d0;
+  --nav-active-pill: #047857;
+}
+
+.dark {
+  --color-background: #09090b;
+  --color-foreground: #f8fafc;
+  --color-surface: #18181b;
+  --color-card: #121215;
+  --color-card-hover: #27272a;
+  --color-primary: #10b981;
+  --color-primary-foreground: #042f2e;
+  --color-secondary: #27272a;
+  --color-accent: #38bdf8;
+  --color-muted: #27272a;
+  --color-muted-foreground: #94a3b8;
+  --color-success: #10b981;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-error: #f87171;
+  --color-border: #27272a;
+  --color-input: #27272a;
+  --color-ring: #10b981;
+  --color-navbar: #09090b;
+  --color-sidebar: #09090b;
+  --color-footer: #09090b;
+  --shadow: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
+
+  /* 5-Step Severity Scale Tokens (Dark) */
+  --severity-healthy: #10b981;
+  --severity-mild: #60a5fa;
+  --severity-moderate: #fbbf24;
+  --severity-severe: #fb923c;
+  --severity-critical: #f87171;
+
+  /* Navigation Item Contrast Tokens (Dark) */
+  --nav-active-bg: rgba(6, 95, 70, 0.28);
+  --nav-active-text: #34d399;
+  --nav-active-border: rgba(52, 211, 153, 0.25);
+  --nav-active-pill: #10b981;
+}
+
+/* Global Smooth Theme Transitions */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduced Motion Override (WCAG 2.1 AA / Section 508) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation Item High-Contrast Classes */
+.nav-item-active {
+  background-color: var(--nav-active-bg) !important;
+  color: var(--nav-active-text) !important;
+  border: 1px solid var(--nav-active-border, transparent) !important;
+  font-weight: 600 !important;
+}
+
+.nav-item-active .nav-icon {
+  color: var(--nav-active-text) !important;
+}
+
+/* Gradient Text Helper */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Button Utilities */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground, #ffffff);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--color-card-hover);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted-foreground);
+  opacity: 0.3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.6;
+}
+
+.card-hover {
+  transition: all 0.2s ease;
+}
+.card-hover:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* Recharts styles */
+.recharts-text {
+  fill: var(--color-muted-foreground) !important;
+  font-size: 11px !important;
+}
+.recharts-cartesian-grid line {
+  stroke: var(--color-border) !important;
+}
+
+/* tailwindcss-animate polyfill — animate-in / fade-in / zoom-in-95 / duration-* */
+@keyframes animateIn {
+  from { opacity: 0; transform: scale(0.97) translateY(4px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+@keyframes fadeInOnly {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+  animation-duration: 200ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-in       { animation-name: fadeInOnly; }
+.zoom-in-95    { animation-name: animateIn; }
+.duration-300  { animation-duration: 300ms !important; }
+.duration-500  { animation-duration: 500ms !important; }
+
+/* Sidebar scroll */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.sidebar-scroll:hover {
+  scrollbar-color: var(--color-muted-foreground) transparent;
+}
+
+/* Print Styles for Agronomic Reports & Field Audits */
+@media print {
+  aside,
+  header,
+  nav,
+  button:not(.print-keep),
+  .no-print {
+    display: none !important;
+  }
+
+  body,
+  #root,
+  main {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .bg-card,
+  .bg-muted,
+  .border {
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

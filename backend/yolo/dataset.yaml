@@ -1,0 +1,17 @@
+names:
+  0: Anthracnose
+  1: BudBorer
+  2: FruitRot
+  3: Healthy
+  4: LeafSpotComplex
+  5: NutCracking
+  6: PhytoplasmaYellowLeaf
+  7: SootyMold
+  8: StemBleeding
+  9: StemCracking
+  10: YellowLeaf
+nc: 11
+path: d:/ArecaVision_Combined/backend/yolo/dataset
+test: images/test
+train: images/train
+val: images/val
