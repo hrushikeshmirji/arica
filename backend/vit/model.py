@@ -53,9 +53,15 @@ class ViTClassifier(nn.Module):
             nn.Linear(in_features, num_classes),
         )
 
+        self.temperature: float = 1.0
+
         # Attention map storage
         self._attention_maps: torch.Tensor | None = None
         self._hook_handle = self._register_attn_hook()
+
+        # Final encoder block token activations storage
+        self._last_tokens: torch.Tensor | None = None
+        self._tokens_hook_handle = self._register_tokens_hook()
 
         # timm defaults fused_attn=True which bypasses the attn_drop layer,
         # preventing the forward hook above from ever firing.  Disable it on
@@ -78,6 +84,24 @@ class ViTClassifier(nn.Module):
         # inputs[0]: [B, heads, N, N]  (post-softmax attention weights)
         self._attention_maps = inputs[0].detach()
 
+    def _register_tokens_hook(self):
+        """Hook on the last transformer block to capture output token activations."""
+        try:
+            layer = self.model.blocks[-1]
+            return layer.register_forward_hook(self._tokens_hook)
+        except Exception as exc:
+            print(f"[ViT] Warning: could not register tokens hook — {exc}")
+            return None
+
+    def _tokens_hook(self, _module, _inputs, output) -> None:
+        # output is [B, 197, 768] (or tuple if block returns tuple)
+        try:
+            if isinstance(output, tuple):
+                output = output[0]
+            self._last_tokens = output.detach()
+        except Exception:
+            self._last_tokens = None
+
     # ------------------------------------------------------------------
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.model(x)
@@ -85,6 +109,10 @@ class ViTClassifier(nn.Module):
     def get_attention_maps(self) -> torch.Tensor | None:
         """Return the last captured attention tensor [B, heads, N, N]."""
         return self._attention_maps
+
+    def get_last_tokens(self) -> torch.Tensor | None:
+        """Return the last captured token activations [B, 197, 768]."""
+        return self._last_tokens
 
     # ------------------------------------------------------------------
     def unfreeze_last_n_blocks(self, n: int) -> None:

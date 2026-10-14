@@ -8,7 +8,7 @@ import argparse
 import os
 import sys
 from pathlib import Path
-from typing import Union
+from typing import Any, Union
 
 import cv2
 import numpy as np
@@ -23,6 +23,257 @@ from vit.dataset import get_vit_transforms
 from vit.model import ViTClassifier
 
 ImageInput = Union[str, Path, Image.Image, np.ndarray]
+
+
+def compute_predictive_reliability(
+    probs: torch.Tensor | np.ndarray, num_classes: int = 11
+) -> dict[str, Any]:
+    """Compute diagnostic reliability metrics: Normalized Shannon Entropy, Top-2 Margin, and High Certainty gating.
+
+    1. Normalized Shannon Entropy:
+       entropy = -sum(p * log(p + 1e-12)) / log(num_classes) (ranges from 0.0 certain to 1.0 uniform confusion)
+    2. Top-2 Margin:
+       margin = top1_prob - top2_prob
+    3. is_high_certainty:
+       bool(entropy < 0.45 and margin > 0.20)
+    """
+    if isinstance(probs, torch.Tensor):
+        p = probs.detach().cpu().numpy().astype(np.float64)
+    else:
+        p = np.asarray(probs, dtype=np.float64)
+
+    p = np.squeeze(p)
+    p = np.clip(p, 1e-12, 1.0)
+    p = p / np.sum(p)
+
+    c = max(int(num_classes), len(p), 2)
+    shannon_entropy = float(-np.sum(p * np.log(p)) / np.log(c))
+    shannon_entropy = float(np.clip(shannon_entropy, 0.0, 1.0))
+
+    sorted_p = np.sort(p)[::-1]
+    top1_prob = float(sorted_p[0])
+    top2_prob = float(sorted_p[1]) if len(sorted_p) > 1 else 0.0
+    margin = float(top1_prob - top2_prob)
+
+    is_high_certainty = bool(shannon_entropy < 0.45 and margin > 0.20)
+
+    return {
+        "predictive_entropy": round(shannon_entropy, 4),
+        "top2_margin": round(margin, 4),
+        "is_high_certainty": is_high_certainty,
+        "top1_prob": round(top1_prob, 4),
+        "top2_prob": round(top2_prob, 4),
+    }
+
+
+def predict_vit_with_tta(
+    vit_model: torch.nn.Module,
+    image_pil: Image.Image | np.ndarray,
+    transform,
+    temperature: float = 1.0,
+    uncertainty_threshold: float = 0.80,
+    device: torch.device | str | None = None,
+) -> tuple[torch.Tensor, int]:
+    """Execute Temperature-Calibrated 3-View Test-Time Augmentation (TTA).
+
+    - Pass 1 (Fast Path): Standard transformed inference (224x224). If max(p_1) >= uncertainty_threshold,
+      returns p_1 immediately with tta_views=1 (zero latency overhead on clear images).
+    - Pass 2 & 3 (Borderline Field Sample Path): If max(p_1) < uncertainty_threshold:
+      * View 2: Horizontal flip of input image (p_2)
+      * View 3: 90% central crop resized to 224x224 (p_3)
+      Ensemble: p_ensemble = 0.50 * p_1 + 0.25 * p_2 + 0.25 * p_3, returning tta_views=3.
+    """
+    if device is None:
+        try:
+            device = next(vit_model.parameters()).device
+        except StopIteration:
+            device = torch.device("cpu")
+
+    if isinstance(image_pil, np.ndarray):
+        rgb = ViTPredictor._to_rgb(image_pil)
+    elif isinstance(image_pil, Image.Image):
+        rgb = np.asarray(image_pil.convert("RGB"))
+    elif isinstance(image_pil, (str, Path)):
+        rgb = ViTPredictor._to_rgb(image_pil)
+    else:
+        raise TypeError(f"Unsupported image type: {type(image_pil)}")
+
+    sq_rgb = ViTPredictor.letterbox_to_square(rgb)
+    pil_img = Image.fromarray(sq_rgb)
+
+    def _tf_to_tensor(img: Image.Image) -> torch.Tensor:
+        if callable(transform):
+            np_arr = np.asarray(img)
+            # Try Albumentations named keyword 'image'
+            try:
+                out = transform(image=np_arr)
+                if isinstance(out, dict) and "image" in out:
+                    return out["image"]
+                if isinstance(out, torch.Tensor):
+                    return out
+            except Exception:
+                pass
+            # Try torchvision transform
+            try:
+                out = transform(img)
+                if isinstance(out, torch.Tensor):
+                    return out
+                if isinstance(out, dict) and "image" in out:
+                    return out["image"]
+            except Exception:
+                pass
+            # Try positional numpy
+            try:
+                out = transform(np_arr)
+                if isinstance(out, torch.Tensor):
+                    return out
+            except Exception:
+                pass
+        raise ValueError("Provided transform is incompatible with image input.")
+
+    # Pass 1: Standard transformed inference (224x224)
+    t1 = _tf_to_tensor(pil_img).unsqueeze(0).to(device)
+    temp = max(float(temperature), 0.05)
+
+    with torch.no_grad():
+        logits_1 = vit_model(t1)
+        p_1 = torch.softmax(logits_1 / temp, dim=-1)[0]
+
+    max_p1 = float(p_1.max().item())
+    if max_p1 >= uncertainty_threshold:
+        return p_1, 1
+
+    # Pass 2: Horizontal flip
+    img_flip = pil_img.transpose(Image.FLIP_LEFT_RIGHT)
+    t2 = _tf_to_tensor(img_flip).unsqueeze(0).to(device)
+
+    # Pass 3: 90% central crop resized to 224x224
+    w, h = pil_img.size
+    cw, ch = max(16, int(w * 0.90)), max(16, int(h * 0.90))
+    cx, cy = (w - cw) // 2, (h - ch) // 2
+    img_crop = pil_img.crop((cx, cy, cx + cw, cy + ch)).resize((224, 224), Image.Resampling.BILINEAR)
+    t3 = _tf_to_tensor(img_crop).unsqueeze(0).to(device)
+
+    with torch.no_grad():
+        t_23 = torch.cat([t2, t3], dim=0)
+        logits_23 = vit_model(t_23)
+        p_23 = torch.softmax(logits_23 / temp, dim=-1)
+        p_2 = p_23[0]
+        p_3 = p_23[1]
+
+    p_ensemble = 0.50 * p_1 + 0.25 * p_2 + 0.25 * p_3
+    p_ensemble = p_ensemble / (p_ensemble.sum() + 1e-12)
+    return p_ensemble, 3
+
+
+def extract_vit_attention_boxes(
+    model: ViTClassifier,
+    image_input: ImageInput,
+    transform,
+    orig_width: int,
+    orig_height: int,
+    threshold: float = 0.65,
+    min_area_ratio: float = 0.015,
+    device: torch.device | str | None = None,
+) -> list[dict[str, Any]]:
+    """Derive lesion bounding boxes directly from ViT final encoder block self-attention / spatial feature tokens.
+
+    1. Clean forward hook on the final Transformer encoder block (extract patch token norms on 14x14 grid).
+    2. Min-max normalization to [0.0, 1.0], upsample to (orig_width, orig_height) via cv2.INTER_CUBIC, threshold at 0.65.
+    3. Connected components via cv2.findContours, discard noise < 1.5% area, rank by mean activation energy.
+    4. Wrapped in try...except so inference never crashes.
+    """
+    try:
+        if device is None:
+            try:
+                device = next(model.parameters()).device
+            except StopIteration:
+                device = torch.device("cpu")
+
+        rgb = ViTPredictor._to_rgb(image_input)
+        sq_img = ViTPredictor.letterbox_to_square(rgb)
+
+        # Trigger forward pass to populate hooks if needed
+        with torch.no_grad():
+            if callable(transform):
+                try:
+                    tf_res = transform(image=sq_img)
+                    t_in = tf_res["image"].unsqueeze(0).to(device)
+                    _ = model(t_in)
+                except Exception:
+                    pass
+
+        grid = None
+        # 1. Extract patch token norms from the final encoder block tokens
+        tokens = getattr(model, "get_last_tokens", lambda: None)()
+        if tokens is not None and tokens.ndim == 3 and tokens.shape[1] >= 197:
+            # Patch tokens: indices 1..196
+            patch_tokens = tokens[0, 1:197, :]
+            token_norms = torch.norm(patch_tokens, p=2, dim=-1)
+            grid_size = int(np.sqrt(token_norms.shape[0]))
+            grid = token_norms.reshape(grid_size, grid_size).cpu().numpy()
+
+        # Fallback to CLS attention map if token norms unavailable
+        if grid is None:
+            attn = getattr(model, "get_attention_maps", lambda: None)()
+            if attn is not None and attn.ndim == 4:
+                cls_attn = attn[0, :, 0, 1:197].mean(dim=0)
+                grid_size = int(np.sqrt(cls_attn.shape[0]))
+                grid = cls_attn.reshape(grid_size, grid_size).cpu().numpy()
+
+        if grid is None:
+            return []
+
+        # 2. Min-max normalization to [0.0, 1.0]
+        g_min, g_max = float(grid.min()), float(grid.max())
+        if g_max - g_min > 1e-8:
+            grid_norm = (grid - g_min) / (g_max - g_min)
+        else:
+            grid_norm = np.zeros_like(grid)
+
+        # Upsample to match letterboxed square, then un-pad to original aspect ratio
+        h_orig, w_orig = int(orig_height), int(orig_width)
+        max_dim = max(h_orig, w_orig)
+        upsampled_sq = cv2.resize(grid_norm, (max_dim, max_dim), interpolation=cv2.INTER_CUBIC)
+
+        pad_h = (max_dim - h_orig) // 2
+        pad_w = (max_dim - w_orig) // 2
+        act_map = upsampled_sq[pad_h : pad_h + h_orig, pad_w : pad_w + w_orig]
+        act_map = cv2.resize(act_map, (w_orig, h_orig), interpolation=cv2.INTER_CUBIC)
+
+        # Re-normalize activation map on active frame
+        a_min, a_max = float(act_map.min()), float(act_map.max())
+        if a_max - a_min > 1e-8:
+            act_map = (act_map - a_min) / (a_max - a_min)
+
+        # 3. Threshold at 0.65 and find connected components
+        binary_mask = np.uint8(act_map >= float(threshold)) * 255
+        contours, _ = cv2.findContours(binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        min_area = float(w_orig * h_orig * float(min_area_ratio))
+
+        boxes = []
+        for c in contours:
+            area = cv2.contourArea(c)
+            if area < min_area:
+                continue
+            bx, by, bw, bh = cv2.boundingRect(c)
+            x1, y1 = max(0, bx), max(0, by)
+            x2, y2 = min(w_orig, bx + bw), min(h_orig, by + bh)
+            if (x2 - x1) >= 16 and (y2 - y1) >= 16:
+                roi = act_map[y1:y2, x1:x2]
+                energy = float(roi.mean()) if roi.size > 0 else 0.0
+                boxes.append({
+                    "box": [int(x1), int(y1), int(x2), int(y2)],
+                    "energy": round(energy, 4),
+                    "confidence": round(energy * 100.0, 1),
+                    "area_ratio": round(area / float(w_orig * h_orig), 4),
+                })
+
+        boxes.sort(key=lambda b: b["energy"], reverse=True)
+        return boxes
+    except Exception as exc:
+        print(f"[ViT Localization] Warning: attention box extraction failed gracefully — {exc}")
+        return []
 
 
 class ViTPredictor:
@@ -40,15 +291,23 @@ class ViTPredictor:
             freeze_backbone=False,
         ).to(self.device)
 
+        self.temperature = float(getattr(config, "VIT_TEMPERATURE", 1.0))
         if ckpt.is_file():
             state = torch.load(ckpt, map_location=self.device, weights_only=False)
-            if isinstance(state, dict) and "model_state_dict" in state:
-                state = state["model_state_dict"]
+            if isinstance(state, dict):
+                if "temperature" in state:
+                    try:
+                        self.temperature = float(state["temperature"])
+                    except Exception:
+                        pass
+                if "model_state_dict" in state:
+                    state = state["model_state_dict"]
             self.model.load_state_dict(state, strict=True)
-            print(f"[ViT] Loaded weights from {ckpt}")
+            print(f"[ViT] Loaded weights from {ckpt} (calibrated temperature={self.temperature:.4f})")
         else:
             print(f"[ViT] Warning: checkpoint not found at {ckpt} — using random weights.")
 
+        self.model.temperature = self.temperature
         self.model.eval()
         _, self._tf = get_vit_transforms(config.VIT_IMG_SIZE)
 
@@ -241,13 +500,13 @@ class ViTPredictor:
     # ------------------------------------------------------------------
     def _calibrate_probs(self, logits: torch.Tensor) -> torch.Tensor:
         """Apply standard temperature-scaled softmax without distorting priors, unifying Yellow Leaf nodes."""
-        temp = float(getattr(config, "VIT_TEMPERATURE", 1.0))
+        temp = max(float(self.temperature), 0.05)
         pyl_idx = self.classes.index("PhytoplasmaYellowLeaf") if "PhytoplasmaYellowLeaf" in self.classes else -1
         logits_adj = logits.clone()
         if pyl_idx >= 0:
             # Suppress duplicate node so Yellow Leaf is not double-counted in softmax denominator
             logits_adj[:, pyl_idx] = -1e9
-        probs = torch.softmax(logits_adj / max(temp, 0.1), dim=1)
+        probs = torch.softmax(logits_adj / temp, dim=1)
         return probs
 
     # ------------------------------------------------------------------
@@ -356,6 +615,23 @@ class ViTPredictor:
         # AND model prediction has near-zero confidence (<0.20). Do not override valid arecanut scans.
         is_ood = (self.prototypes is not None) and (max_proto_sim < 0.15) and (best_conf < 0.20)
 
+        # Diagnostic reliability metrics
+        rel_metrics = compute_predictive_reliability(fused_probs.cpu().numpy(), num_classes=len(self.classes))
+
+        # Weakly-Supervised ViT Attention Rollout for Lesion Localization
+        vit_attn_boxes = []
+        if not is_ood and best_label != "Healthy":
+            vit_attn_boxes = extract_vit_attention_boxes(
+                model=self.model,
+                image_input=rgb,
+                transform=self._tf,
+                orig_width=w,
+                orig_height=h,
+                threshold=0.65,
+                min_area_ratio=0.015,
+                device=self.device,
+            )
+
         # Top-4 differential diagnosis using true normalized probabilities
         top_vals, top_indices = torch.topk(fused_probs, k=min(4, len(self.classes)))
         differential = [
@@ -382,6 +658,87 @@ class ViTPredictor:
                 "lesionCoveragePct": morph["lesionCoveragePct"],
             },
             "saliencyBox": morph["saliencyBox"] if not is_ood else None,
+            "calibration_temperature": self.temperature,
+            "predictive_entropy": rel_metrics["predictive_entropy"],
+            "top2_margin": rel_metrics["top2_margin"],
+            "tta_views": len(crops_with_weights),
+            "is_high_certainty": rel_metrics["is_high_certainty"],
+            "vitAttentionBoxes": vit_attn_boxes,
+        }
+
+    def extract_attention_boxes(
+        self,
+        image: ImageInput,
+        orig_width: int,
+        orig_height: int,
+        threshold: float = 0.65,
+        min_area_ratio: float = 0.015,
+    ) -> list[dict[str, Any]]:
+        """Extract weakly-supervised lesion bounding boxes grounded in ViT final encoder block activations."""
+        return extract_vit_attention_boxes(
+            model=self.model,
+            image_input=image,
+            transform=self._tf,
+            orig_width=orig_width,
+            orig_height=orig_height,
+            threshold=threshold,
+            min_area_ratio=min_area_ratio,
+            device=self.device,
+        )
+
+    @torch.inference_mode()
+    def predict_with_diagnostics(
+        self, image: ImageInput, uncertainty_threshold: float = 0.80
+    ) -> dict[str, Any]:
+        """Run calibrated 3-view TTA, predictive entropy gating, and weakly-supervised lesion localization."""
+        rgb = self._to_rgb(image)
+        h, w = rgb.shape[:2]
+        pil_img = Image.fromarray(rgb)
+
+        probs, tta_views = predict_vit_with_tta(
+            vit_model=self.model,
+            image_pil=pil_img,
+            transform=self._tf,
+            temperature=self.temperature,
+            uncertainty_threshold=uncertainty_threshold,
+            device=self.device,
+        )
+
+        probs_np = probs.cpu().numpy()
+        rel = compute_predictive_reliability(probs_np, num_classes=len(self.classes))
+
+        conf, best_idx = torch.max(probs, dim=0)
+        best_label = self.classes[int(best_idx.item())]
+        best_conf = float(conf.item())
+
+        top_vals, top_indices = torch.topk(probs, k=min(4, len(self.classes)))
+        differential = [
+            {
+                "disease": self.classes[int(i.item())],
+                "probability": round(float(v.item()) * 100.0, 1),
+            }
+            for v, i in zip(top_vals, top_indices)
+            if float(v.item()) > 0.001
+        ]
+
+        attn_boxes = []
+        if best_label != "Healthy":
+            attn_boxes = self.extract_attention_boxes(rgb, orig_width=w, orig_height=h)
+
+        attn = getattr(self.model, "get_attention_maps", lambda: None)()
+        attn_np = attn[0].cpu().numpy() if attn is not None else None
+
+        return {
+            "label": best_label,
+            "confidence": best_conf,
+            "calibration_temperature": self.temperature,
+            "predictive_entropy": rel["predictive_entropy"],
+            "top2_margin": rel["top2_margin"],
+            "tta_views": tta_views,
+            "is_high_certainty": rel["is_high_certainty"],
+            "vitAttentionBoxes": attn_boxes,
+            "differential": differential,
+            "attn_map": attn_np,
         }
 
     @torch.inference_mode()

@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security-and-hygiene:
+    name: Security & Index Hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check for tracked databases and secret files
+        run: |
+          TRACKED_FORBIDDEN=$(git ls-files | grep -E '\.(db|sqlite|sqlite3)$|^\.env$|\/\.env$' || true)
+          if [ -n "$TRACKED_FORBIDDEN" ]; then
+            echo "::error::Found forbidden database or secret files tracked in git:"
+            echo "$TRACKED_FORBIDDEN"
+            exit 1
+          fi
+          echo "Security check passed: No database or secret files are tracked."
+
+      - name: Verify no hardcoded JWT fallback secrets
+        run: |
+          HARDCODED_SECRETS=$(grep -rn "ARECAVISION_AI_ENTERPRISE_SECRET_KEY" backend/ || true)
+          if [ -n "$HARDCODED_SECRETS" ]; then
+            echo "::error::Found hardcoded JWT secret fallback in source code:"
+            echo "$HARDCODED_SECRETS"
+            exit 1
+          fi
+          echo "Security check passed: Dynamic environment-backed JWT secret handling verified."
+
+  backend-verify:
+    name: Backend Compilation & Syntax Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install backend dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Compile and syntax-check critical backend modules
+        run: |
+          python -m py_compile backend/server/app.py
+          python -m py_compile backend/server/auth.py
+          python -m py_compile backend/vit/predict.py
+          python -m py_compile backend/vit/model.py
+          python -m py_compile backend/train_gate.py
+          python -m py_compile backend/build_clean_dataset.py
+          python -m py_compile backend/train_vit_clean.py
+
+  frontend-build:
+    name: Frontend Build & Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install frontend dependencies
+        run: |
+          cd FRONTEND
+          npm ci || npm install
+
+      - name: Verify frontend build
+        run: |
+          cd FRONTEND
+          npm run build

@@ -2,11 +2,30 @@ import os
 import uuid
 import bcrypt
 import jwt
+import logging
+import secrets
+import string
 from datetime import datetime, timezone, timedelta
 from typing import Any
 from server.db import _DB_LOCK, _get_conn, get_all_scans
 
-JWT_SECRET = os.getenv("JWT_SECRET", "ARECAVISION_AI_ENTERPRISE_SECRET_KEY_2026_PRODUCTION")
+logger = logging.getLogger("arecavision.auth")
+
+_DYNAMIC_JWT_SECRET: str | None = None
+
+def get_jwt_secret() -> str:
+    """Return environment-backed JWT secret or dynamically generated ephemeral secret."""
+    global _DYNAMIC_JWT_SECRET
+    env_secret = os.getenv("JWT_SECRET")
+    if env_secret and env_secret.strip():
+        return env_secret.strip()
+    if _DYNAMIC_JWT_SECRET is None:
+        _DYNAMIC_JWT_SECRET = secrets.token_urlsafe(32)
+        logger.warning(
+            "JWT_SECRET environment variable is not set. Generated an ephemeral in-memory secret for this session."
+        )
+    return _DYNAMIC_JWT_SECRET
+
 JWT_ALGORITHM = "HS256"
 
 def init_auth_tables() -> None:
@@ -37,8 +56,6 @@ def init_auth_tables() -> None:
             # Seed admin user
             cur = conn.execute("SELECT COUNT(*) FROM users WHERE username = 'admin'")
             if cur.fetchone()[0] == 0:
-                import secrets
-                import string
                 admin_id = str(uuid.uuid4())
                 now_str = datetime.now(timezone.utc).isoformat()
                 dev_seed = os.getenv("DEV_SEED_ADMIN", "").lower() in ("true", "1", "yes")
@@ -49,8 +66,8 @@ def init_auth_tables() -> None:
                     alphabet = string.ascii_letters + string.digits + "!@#$%^&*()"
                     initial_password = "".join(secrets.choice(alphabet) for _ in range(18))
                     must_change = 1
-                    print(f"[SECURITY] Generated initial random admin password: {initial_password}")
-                    print("[SECURITY] Admin must change password on first login.")
+                    logger.info(f"[SECURITY] Generated initial random admin password: {initial_password}")
+                    logger.info("[SECURITY] Admin must change password on first login.")
                 pwd_hash = hash_password(initial_password)
                 conn.execute(
                     """
@@ -81,11 +98,11 @@ def create_jwt(user_id: str, role: str) -> str:
         "exp": datetime.now(timezone.utc) + timedelta(hours=24),
         "iat": datetime.now(timezone.utc)
     }
-    return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
+    return jwt.encode(payload, get_jwt_secret(), algorithm=JWT_ALGORITHM)
 
 def decode_jwt(token: str) -> dict | None:
     try:
-        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
+        payload = jwt.decode(token, get_jwt_secret(), algorithms=[JWT_ALGORITHM])
         return payload
     except jwt.PyJWTError:
         return None

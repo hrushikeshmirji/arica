@@ -15,6 +15,7 @@ import asyncio
 import base64
 import glob
 import io
+import logging
 import os
 import sys
 import time
@@ -23,6 +24,9 @@ import uuid
 from datetime import datetime, timezone
 from threading import Lock, Thread
 from typing import Any
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+logger = logging.getLogger("arecavision.server")
 
 import csv
 import cv2
@@ -227,8 +231,7 @@ async def validation_exception_handler(_request: Request, _exc: RequestValidatio
 
 @app.exception_handler(Exception)
 async def general_exception_handler(request: Request, exc: Exception):
-    print(f"[Server Error] Unhandled exception on {request.method} {request.url.path}: {exc}", file=sys.stderr)
-    traceback.print_exc()
+    logger.error("Unhandled exception on %s %s: %s", request.method, request.url.path, exc, exc_info=True)
     return JSONResponse(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content=_envelope(error={"code": "INTERNAL_SERVER_ERROR", "message": "An unexpected server error occurred. Please try again."}),
@@ -238,7 +241,7 @@ async def general_exception_handler(request: Request, exc: Exception):
 # ---------------------------------------------------------------------------
 # Load models once at startup
 # ---------------------------------------------------------------------------
-print("[Server] Loading CNN + YOLO + ViT models …")
+logger.info("Loading CNN + YOLO + ViT models …")
 cnn_predictor = CNNPredictor()
 vit_predictor = ViTPredictor()
 
@@ -248,12 +251,9 @@ _yolo_is_trained = os.path.isfile(_YOLO_CHECKPOINT_PATH)
 yolo_detector = YOLODetector(conf_threshold=0.10)
 
 if not _yolo_is_trained:
-    print("=" * 70)
-    print("[Server] WARNING: yolo/checkpoints/best.pt was NOT found.")
-    print("[Server] Falling back to generic pretrained YOLOv8n weights.")
-    print("=" * 70)
+    logger.warning("yolo/checkpoints/best.pt was NOT found. Falling back to generic pretrained YOLOv8n weights.")
 
-print("[Server] All 3 models loaded (CNN gate + YOLO region-detector + ViT classifier).")
+logger.info("All 3 models loaded (CNN gate + YOLO region-detector + ViT classifier).")
 
 # ---------------------------------------------------------------------------
 # In-memory job store with bounded LRU cleanup
@@ -319,7 +319,7 @@ def _update_job_progress(job_id: str, pct: int, stage_name: str) -> None:
     try:
         sqlite_db.update_job(job_id, "processing", stage_name, pct)
     except Exception as e:
-        print(f"[Server] Failed to update job in db: {e}", file=sys.stderr)
+        logger.error(f"Failed to update job in db: {e}")
 
 
 def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", user_id: str | None = None) -> None:
@@ -357,7 +357,7 @@ def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", 
             pil_img.save(upload_path, format="JPEG", quality=88)
             scan_image_url = f"/uploads/{upload_filename}"
         except Exception as e:
-            print(f"[Server] Failed to save upload image: {e}", file=sys.stderr)
+            logger.error(f"Failed to save upload image: {e}")
             scan_image_url = ""
 
         # ---- Stage 1: CNN Gatekeeper -------------------------------------
@@ -392,7 +392,7 @@ def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", 
                 is_arecanut = True
                 cnn_label = "Arecanut"
                 cnn_conf_pct = round(max(float(cnn_conf_pct), float(probe_conf * 100.0)), 1)
-                print(f"[Gatekeeper] Dual-probe override: ViT confirmed valid Arecanut tissue ({probe_label} @ {probe_conf*100:.1f}%, sim={probe_sim:.3f})")
+                logger.info(f"[Gatekeeper] Dual-probe override: ViT confirmed valid Arecanut tissue ({probe_label} @ {probe_conf*100:.1f}%, sim={probe_sim:.3f})")
 
         if not is_arecanut:
             total_ms = max(1, round((time.perf_counter() - t_start) * 1000))
@@ -525,6 +525,12 @@ def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", 
                 "attentionMapUrl": "",
                 "gradCamUrl": "",
                 "imageUrl": scan_image_url,
+                "calibrationTemperature": float((probe_tta or tta_out).get("calibration_temperature", 1.0)),
+                "predictiveEntropy": float((probe_tta or tta_out).get("predictive_entropy", 1.0)),
+                "top2Margin": float((probe_tta or tta_out).get("top2_margin", 0.0)),
+                "ttaViews": int((probe_tta or tta_out).get("tta_views", 1)),
+                "isHighCertainty": False,
+                "vitAttentionBoxes": [],
             }
             with _jobs_lock:
                 _jobs[job_id] = {
@@ -572,6 +578,23 @@ def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", 
                 "height": f"{((y2 - y1) / H) * 100:.1f}%",
                 "color": "#10b981" if c_label == "Healthy" else "#dc2626",
             })
+
+        # Stage 2/3 Weakly-Supervised ViT Attention Localization
+        # If YOLO has no confident detections, use true ViT attention-grounded bounding boxes
+        vit_attn_boxes = tta_out.get("vitAttentionBoxes") or []
+        if not yolo_boxes and vit_attn_boxes and top_label != "Healthy":
+            for v_b in vit_attn_boxes:
+                bx1, by1, bx2, by2 = v_b["box"]
+                b_conf = float(v_b.get("confidence", top_conf_pct))
+                yolo_boxes.append({
+                    "label": f"{top_display} (ViT Attention {b_conf:.1f}%)",
+                    "confidence": b_conf,
+                    "top": f"{(by1 / H) * 100:.1f}%",
+                    "left": f"{(bx1 / W) * 100:.1f}%",
+                    "width": f"{((bx2 - bx1) / W) * 100:.1f}%",
+                    "height": f"{((by2 - by1) / H) * 100:.1f}%",
+                    "color": "#dc2626",
+                })
 
         # Saliency heuristic box (explicitly labeled with focal lesion region)
         saliency_box_obj = None
@@ -749,6 +772,12 @@ def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", 
                 "gradCamUrl": "",
                 "imageUrl": scan_image_url,
                 "geminiVerification": gemini_verif,
+                "calibrationTemperature": float(tta_out.get("calibration_temperature", 1.0)),
+                "predictiveEntropy": float(tta_out.get("predictive_entropy", 1.0)),
+                "top2Margin": float(tta_out.get("top2_margin", 0.0)),
+                "ttaViews": int(tta_out.get("tta_views", 1)),
+                "isHighCertainty": bool(tta_out.get("is_high_certainty", False)),
+                "vitAttentionBoxes": vit_attn_boxes,
             }
             with _jobs_lock:
                 _jobs[job_id] = {
@@ -811,6 +840,12 @@ def _run_inference(job_id: str, image_bytes: bytes, block_id: str = "block-a1", 
             "gradCamUrl": "",
             "imageUrl": scan_image_url,
             "geminiVerification": gemini_verif,
+            "calibrationTemperature": float(tta_out.get("calibration_temperature", 1.0)),
+            "predictiveEntropy": float(tta_out.get("predictive_entropy", 0.0)),
+            "top2Margin": float(tta_out.get("top2_margin", 0.0)),
+            "ttaViews": int(tta_out.get("tta_views", 1)),
+            "isHighCertainty": bool(tta_out.get("is_high_certainty", True)),
+            "vitAttentionBoxes": vit_attn_boxes,
         }
 
         with _jobs_lock:
